@@ -1,0 +1,14 @@
+{
+  "updated": "Nov 17, 2026",
+  "android": {
+    "version": 120,
+    "updated": "Nov 17, 2026",
+    "notes": "The update message now also shows when you come back to the app. The Updates button moved to the bottom-left corner. The Technical Support window fits on every TV.",
+    "apk": "https://github.com/danramzi-eagle5871/dans-iptv/releases/latest/download/DansIPTV-Share.apk"
+  },
+  "windows": {
+    "version": "1.6.6",
+    "updated": "Nov 17, 2026",
+    "download": "https://github.com/danramzi-eagle5871/dans-iptv/releases/latest/download/Dans-IPTV-Setup.exe"
+  }
+}

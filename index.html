@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dan's IPTV Player</title>
+<style>
+:root { --navy: #081629; --gold: #d8b45a; --muted: #b9c4d3; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(145deg, rgb(6,16,30), rgb(18,41,67)); color: #fff; min-height: 100vh; }
+.wrap { max-width: 980px; margin: auto; padding: 36px 20px 60px; }
+.hero { text-align: center; padding: 42px 15px 32px; }
+.hero h1 { color: var(--gold); font-size: clamp(32px, 6vw, 52px); margin: 20px 0 10px; }
+.hero p { color: var(--muted); font-size: 18px; line-height: 1.6; max-width: 700px; margin: auto; }
+.posters { display: grid; gap: 18px; margin-top: 8px; }
+.posters img { width: 100%; height: auto; display: block; border-radius: 18px; border: 1px solid rgb(52,70,90); }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; margin-top: 24px; }
+.card { background: rgb(16,36,59); border: 1px solid rgb(52,70,90); border-radius: 18px; padding: 24px; }
+.card h2 { color: var(--gold); margin-top: 0; }
+.card p { color: var(--muted); line-height: 1.55; min-height: 58px; }
+.btn { display: inline-block; background: var(--gold); color: rgb(16,26,40); text-decoration: none; font-weight: bold; padding: 13px 18px; border-radius: 9px; margin-top: 8px; }
+.code { font-size: 27px; font-weight: bold; color: #fff; letter-spacing: 2px; }
+.updates { margin-top: 24px; padding: 20px 24px; border: 1px solid rgb(52,70,90); border-radius: 18px; background: rgb(16,36,59); }
+.updates h2 { color: var(--gold); margin: 0 0 8px; font-size: 20px; }
+.updates p { color: var(--muted); line-height: 1.55; margin: 4px 0; }
+.updates .date { color: #fff; font-weight: bold; }
+.note { margin-top: 28px; padding: 20px; border-left: 4px solid var(--gold); background: rgb(13,29,48); color: var(--muted); line-height: 1.6; border-radius: 8px; }
+.support { text-align: center; margin-top: 28px; color: var(--muted); }
+a.email { color: var(--gold); }
+footer { text-align: center; color: rgb(132,148,168); font-size: 13px; margin-top: 38px; }
+</style></head><body><main class="wrap"><header class="hero"><h1>Dan's IPTV Player</h1><p>A simple IPTV player for your compatible devices. Choose your platform below to get the app.</p></header>
+<section class="posters"><img src="poster-english.jpg" alt="Dan's IPTV – Your Entertainment. Your Player. Available on Android TV, Amazon Fire TV and Android phones."></section>
+<section class="grid">
+<div class="card"><h2>Windows PC</h2><p>Download the Dan's IPTV installer for your Windows computer.</p><a class="btn" href="https://github.com/danramzi-eagle5871/dans-iptv/releases/latest/download/Dans-IPTV-Setup.exe" target="_blank" rel="noopener">Download for Windows</a></div>
+<div class="card"><h2>Android TV, Amazon Fire TV &amp; Android Mobile</h2><p>Install the app using the Downloader app on your device. The same code works for all Android devices.</p><div class="code">7683295</div><a class="btn" href="https://aftv.news/7683295" target="_blank" rel="noopener">Get the Android App</a> <a class="btn" style="background:transparent;color:var(--gold);border:1px solid var(--gold)" href="https://github.com/danramzi-eagle5871/dans-iptv/releases/latest/download/DansIPTV-Share.apk">Direct download (.apk)</a></div>
+</section>
+<section class="posters" style="margin-top:24px"><img src="poster-arabic.jpg" alt="دان آي بي تي في – ترفيهك. مشغّلك." lang="ar"></section>
+<section class="updates" id="updates"><h2>Latest update</h2><p><span class="date" id="upd-line">Loading…</span></p><p id="upd-notes"></p><p><span class="date" id="upd-win"></span></p><p>If the app tells you a new version is available, download it from the buttons above and install it over your current one.</p></section>
+<script>
+fetch("version.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){
+  var a=d.android||{};
+  document.getElementById("upd-line").textContent="Android version "+a.version+" • Updated "+(a.updated||d.updated||"");
+  document.getElementById("upd-notes").textContent=a.notes||"";
+  var w=d.windows;if(w&&w.version)document.getElementById("upd-win").textContent="Windows version "+w.version+" • Updated "+(w.updated||d.updated||"");
+}).catch(function(){document.getElementById("upd-line").textContent="Updated regularly. Check this page for the newest version.";});
+</script>
+<div class="note"><strong>Important:</strong> Dan's IPTV is an IPTV player only. It does not provide channels, movies, TV shows, free content, or IPTV subscriptions. You must have an active subscription from a compatible third-party IPTV provider to log in and access content.</div>
+<div class="support">Technical support: <a class="email" href="mailto:danramzi@yahoo.com">danramzi@yahoo.com</a></div><footer>© Dan's IPTV Player</footer></main>
+</body></html>
