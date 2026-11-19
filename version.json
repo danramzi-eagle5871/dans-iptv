@@ -1,9 +1,9 @@
 {
   "updated": "Nov 18, 2026",
   "android": {
-    "version": 128,
+    "version": 129,
     "updated": "Nov 18, 2026",
-    "notes": "Telegram support on TV",
+    "notes": "Player fixes + gold welcome",
     "apk": "https://github.com/danramzi-eagle5871/dans-iptv/releases/latest/download/DansIPTV-Share.apk"
   },
   "windows": {
