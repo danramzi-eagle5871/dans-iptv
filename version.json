@@ -1,9 +1,9 @@
 {
-  "updated": "Nov 18, 2026",
+  "updated": "Nov 19, 2026",
   "android": {
-    "version": 132,
-    "updated": "Nov 18, 2026",
-    "notes": "TV: sign in with your phone (scan a QR code)",
+    "version": 133,
+    "updated": "Nov 19, 2026",
+    "notes": "Several Xtream accounts, hide categories for every list",
     "apk": "https://github.com/danramzi-eagle5871/dans-iptv/releases/latest/download/DansIPTV-Share.apk"
   },
   "windows": {
