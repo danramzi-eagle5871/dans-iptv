@@ -1,9 +1,9 @@
 {
   "updated": "Nov 19, 2026",
   "android": {
-    "version": 138,
+    "version": 140,
     "updated": "Nov 19, 2026",
-    "notes": "Fix: adding from your phone never replaces your login; all accounts in the Live TV list",
+    "notes": "TV: new My TV services in Settings, icons for Xtream and M3U lists",
     "apk": "https://github.com/danramzi-eagle5871/dans-iptv/releases/latest/download/DansIPTV-Share.apk"
   },
   "windows": {
