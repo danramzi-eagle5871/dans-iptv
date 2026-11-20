@@ -33,8 +33,8 @@ input { flex: 1; min-width: 0; background: transparent; border: 0; outline: 0; c
 .note { color: rgb(132,148,168); font-size: 12.5px; text-align: center; line-height: 1.5; margin-top: 18px; }
 .hide { display: none; }
 </style></head><body><main class="wrap">
-<h1>📺 Sign in on your TV</h1>
-<p class="sub">Type your IPTV details here, then press <b>Send to TV</b>.</p>
+<h1 id="h1">📺 Sign in on your TV</h1>
+<p class="sub" id="sub">Type your IPTV details here, then press <b>Send to TV</b>.</p>
 
 <div id="nokey" class="card hide"><p class="sub" style="margin:0">Please open this page by scanning the QR code on your TV:<br>Dan's IPTV → Settings → <b>Sign in with your phone</b>.</p></div>
 
@@ -49,12 +49,12 @@ input { flex: 1; min-width: 0; background: transparent; border: 0; outline: 0; c
   <div id="mBox" class="hide">
     <label for="m">Playlist link (M3U)</label><div class="field"><input id="m" type="url" inputmode="url" autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="http://…"></div>
   </div>
-  <label for="n">Account name <span class="opt">(optional)</span></label><div class="field"><input id="n" autocomplete="off" placeholder="e.g. Home"></div>
+  <label for="n" id="nLab">Account name <span class="opt">(optional)</span></label><div class="field"><input id="n" autocomplete="off" placeholder="e.g. Home"></div>
   <button type="button" class="send" id="go">Send to TV</button>
   <div class="msg" id="msg"></div>
 </div>
 
-<div id="done" class="card done hide"><div class="big">✅</div><h2>Sent!</h2><p>Look at your TV — it signs in by itself in a few seconds.<br>You can close this page.</p></div>
+<div id="done" class="card done hide"><div class="big">✅</div><h2>Sent!</h2><p id="doneTxt">Look at your TV — it signs in by itself in a few seconds.<br>You can close this page.</p></div>
 
 <p class="note">🔒 Your details are scrambled on this phone before they leave it. Only your TV holds the key to read them, and the message is deleted as soon as the TV picks it up.</p>
 </main>
@@ -63,7 +63,10 @@ input { flex: 1; min-width: 0; background: transparent; border: 0; outline: 0; c
   'use strict';
   var DB = 'https://dans-iptv-sync-default-rtdb.firebaseio.com/link/';
   var $ = function (id) { return document.getElementById(id); };
-  var keyText = (location.hash || '').slice(1).trim();
+  // "#<key>" = sign in (Xtream / M3U); "#<key>.p" = add an extra M3U playlist (TV Settings > Extra M3U playlists)
+  var hashParts = (location.hash || '').slice(1).trim().split('.');
+  var keyText = hashParts[0];
+  var playlistMode = hashParts[1] === 'p';
   var keyBytes = null;
   try {
     var b = atob(keyText.replace(/-/g, '+').replace(/_/g, '/'));
@@ -77,7 +80,15 @@ input { flex: 1; min-width: 0; background: transparent; border: 0; outline: 0; c
   });
   codeP.then(function (c) { $('chk').textContent = c.slice(0, 4).toUpperCase(); $('form').classList.remove('hide'); });
 
-  var mode = 'x';
+  var mode = playlistMode ? 'p' : 'x';
+  if (playlistMode) {
+    $('h1').textContent = '📋 Add a playlist to your TV';
+    $('sub').innerHTML = 'Type a name and the M3U link, then press <b>Send to TV</b>.';
+    document.querySelector('.tabs').classList.add('hide');
+    $('xBox').classList.add('hide'); $('mBox').classList.remove('hide');
+    $('nLab').innerHTML = 'Playlist name <span class="opt">(optional)</span>';
+    $('n').placeholder = 'e.g. Sports list';
+  }
   function setMode(m) {
     mode = m;
     $('tX').classList.toggle('on', m === 'x'); $('tM').classList.toggle('on', m === 'm');
@@ -93,7 +104,10 @@ input { flex: 1; min-width: 0; background: transparent; border: 0; outline: 0; c
 
   $('go').onclick = function () {
     var o = { k: mode, n: $('n').value.trim() };
-    if (mode === 'x') {
+    if (playlistMode) {
+      o.m = $('m').value.trim();
+      if (!/^https?:\/\//i.test(o.m)) { say('The playlist link should start with http:// or https://', 'err'); return }
+    } else if (mode === 'x') {
       o.s = $('s').value.trim(); o.u = $('u').value.trim(); o.p = $('p').value;
       if (!o.s || !o.u || !o.p) { say('Please fill in the server, username and password.', 'err'); return; }
       if (!/^https?:\/\//i.test(o.s)) o.s = 'http://' + o.s;
@@ -111,7 +125,11 @@ input { flex: 1; min-width: 0; background: transparent; border: 0; outline: 0; c
         return fetch(DB + code + '.json', { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ d: b64(all), t: Date.now() }) });
       });
     }).then(function (r) {
-      if (r.ok) { $('p').value = ''; $('form').classList.add('hide'); $('done').classList.remove('hide'); return; }
+      if (r.ok) {
+        $('p').value = ''; $('form').classList.add('hide'); $('done').classList.remove('hide');
+        if (playlistMode) $('doneTxt').innerHTML = 'Look at your TV — the playlist is added in a few seconds.<br>You can close this page.';
+        return;
+      }
       btn.disabled = false;
       if (r.status === 401 || r.status === 403) say('Already sent — look at your TV. If nothing happens, press “New code” on the TV and scan again.', 'err');
       else say('Could not send (error ' + r.status + '). Please try again.', 'err');
