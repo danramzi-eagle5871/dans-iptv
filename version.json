@@ -1,9 +1,9 @@
 {
   "updated": "Nov 19, 2026",
   "android": {
-    "version": 140,
+    "version": 141,
     "updated": "Nov 19, 2026",
-    "notes": "TV: new My TV services in Settings, icons for Xtream and M3U lists",
+    "notes": "Recently Added icon, full account details, matching list icons",
     "apk": "https://github.com/danramzi-eagle5871/dans-iptv/releases/latest/download/DansIPTV-Share.apk"
   },
   "windows": {
