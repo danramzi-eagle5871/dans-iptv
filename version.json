@@ -1,14 +1,14 @@
 {
   "updated": "Nov 20, 2026",
   "android": {
-    "version": 143,
+    "version": 147,
     "updated": "Nov 20, 2026",
-    "notes": "Settings: Clear watch history (under Hide categories). TV home-screen picture back to the original.",
+    "notes": "Add a service with your provider: MAC Address + Device Key + QR code in Settings. Live TV grid plays the channel you rest on. New slim weather + clock bar. Clear watch history. Hide categories lists every account.",
     "apk": "https://github.com/danramzi-eagle5871/dans-iptv/releases/latest/download/DansIPTV-Share.apk"
   },
   "windows": {
-    "version": "1.7.3",
-    "updated": "Nov 19, 2026",
+    "version": "1.7.4",
+    "updated": "Nov 20, 2026",
     "download": "https://github.com/danramzi-eagle5871/dans-iptv/releases/latest/download/Dans-IPTV-Setup.exe"
   }
 }
