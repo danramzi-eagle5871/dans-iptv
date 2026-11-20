@@ -1,9 +1,9 @@
 {
   "updated": "Nov 19, 2026",
   "android": {
-    "version": 137,
+    "version": 138,
     "updated": "Nov 19, 2026",
-    "notes": "TV: sign in or add a playlist from your phone (QR code)",
+    "notes": "Fix: adding from your phone never replaces your login; all accounts in the Live TV list",
     "apk": "https://github.com/danramzi-eagle5871/dans-iptv/releases/latest/download/DansIPTV-Share.apk"
   },
   "windows": {
