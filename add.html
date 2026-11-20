@@ -40,6 +40,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 18px 0 12px; }
 
 <div id="form" class="card">
   <div class="step">1 · The TV</div>
+  <div id="fromQr" class="hide" style="color:#81c784;font-size:13px;margin:4px 0 2px">✓ Filled in from the TV's QR code</div>
   <label for="id">MAC Address</label><div class="field"><input id="id" class="mono" autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="a4:1f:9c:03:7e:b2"></div>
   <label for="key">Device Key</label><div class="field"><input id="key" class="mono" inputmode="numeric" autocomplete="off" maxlength="6" placeholder="6 digits"></div>
   <hr>
@@ -70,6 +71,15 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 18px 0 12px; }
   var DB = 'https://dans-iptv-sync-default-rtdb.firebaseio.com/link/';
   var $ = function (id) { return document.getElementById(id); };
   if (!window.crypto || !crypto.subtle) { $('msg').textContent = 'This browser is too old for this page. Please use another browser.'; $('go').disabled = true; return; }
+  // the TV's QR code opens this page as add#<mac>.<key>: fill both in, then take them out of the address bar / history
+  (function () {
+    var h = (location.hash || '').slice(1).split('.');
+    if (/^[0-9a-f]{12}$/i.test(h[0] || '') && /^[0-9]{6}$/.test(h[1] || '')) {
+      $('id').value = h[0].toLowerCase().match(/../g).join(':'); $('key').value = h[1];
+      $('fromQr').classList.remove('hide');
+      history.replaceState(null, '', location.pathname);
+    }
+  })();
   var mode = 'x';
   function setMode(m) {
     mode = m;
