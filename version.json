@@ -1,9 +1,9 @@
 {
-  "updated": "Nov 20, 2026",
+  "updated": "Nov 21, 2026",
   "android": {
-    "version": 156,
-    "updated": "Nov 20, 2026",
-    "notes": "TV remote: the fast-forward and rewind buttons now jump through long lists and poster grids (Live TV, Movies, Series, Settings).",
+    "version": 157,
+    "updated": "Nov 21, 2026",
+    "notes": "Phones: one round Back button that looks the same on every phone (black circle, light-blue ring, white arrow).",
     "apk": "https://github.com/danramzi-eagle5871/dans-iptv/releases/latest/download/DansIPTV-Share.apk"
   },
   "windows": {
