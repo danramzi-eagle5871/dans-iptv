@@ -1,9 +1,9 @@
 {
   "updated": "Nov 20, 2026",
   "android": {
-    "version": 153,
+    "version": 154,
     "updated": "Nov 20, 2026",
-    "notes": "Series posters: the green NEW season / episode bar now shows in every section (its own section, Recently Added, Favorites, search), and new episodes are checked again every 6 hours.",
+    "notes": "Series posters: the season / episode bar no longer disappears when a series gets a new episode, failed lookups are tried again, and many more series are remembered.",
     "apk": "https://github.com/danramzi-eagle5871/dans-iptv/releases/latest/download/DansIPTV-Share.apk"
   },
   "windows": {
