@@ -26,7 +26,7 @@ a.email { color: var(--gold); }
 footer { text-align: center; color: rgb(132,148,168); font-size: 13px; margin-top: 38px; }
 /* update history */
 .hist { margin-top: 24px; padding: 22px 24px 18px; border: 1px solid rgb(52,70,90); border-radius: 18px; background: rgb(16,36,59); }
-.hist-head { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.hist-head { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-bottom: 8px; }
 .hist-head h2 { color: var(--gold); margin: 0; font-size: 20px; flex: 1 1 auto; }
 .tabs { display: inline-flex; background: rgb(10,25,42); border: 1px solid rgb(52,70,90); border-radius: 999px; padding: 3px; }
 .tabs button { font: inherit; font-weight: bold; font-size: 14px; color: var(--muted); background: none; border: 0; border-radius: 999px; padding: 7px 16px; cursor: pointer; }
@@ -78,29 +78,27 @@ fetch("version.json",{cache:"no-store"}).then(function(r){return r.json()}).then
 </script>
 <section class="hist" id="history">
 <div class="hist-head"><h2>📜 Update history</h2><div class="tabs" role="tablist"><button class="on" data-app="android" role="tab">Android</button><button data-app="windows" role="tab">Windows</button></div></div>
-<input class="hsearch" id="hq" type="search" placeholder="Search the updates (for example: trailer, phone, series)" aria-label="Search the updates">
 <div class="hmeta" id="hmeta"></div>
 <div class="timeline" id="hlist"><p class="hmeta">Loading…</p></div>
 </section>
 <script>
 (function(){
-  var data=null, app="android", showAll=false, SHOW=8;
+  var data=null, app="android", showAll=false, SHOW=1;
   var NAMES={new:"NEW",fix:"FIXED",fast:"FASTER",look:"LOOK"};
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
   function hi(s,q){s=esc(s);if(!q)return s;var i=s.toLowerCase().indexOf(esc(q).toLowerCase());return i<0?s:s.slice(0,i)+"<mark>"+s.slice(i,i+q.length)+"</mark>"+s.slice(i+q.length)}
   function draw(){
-    var q=document.getElementById("hq").value.trim(), list=(data&&data[app])||[], box=document.getElementById("hlist");
+    var q="", list=(data&&data[app])||[], box=document.getElementById("hlist");
     var hits=list.filter(function(e){if(!q)return true;var t=(e.v+" "+e.title+" "+e.items.join(" ")).toLowerCase();return t.indexOf(q.toLowerCase())>=0});
     var shown=q||showAll?hits:hits.slice(0,SHOW);
-    document.getElementById("hmeta").textContent=q?(hits.length+" update"+(hits.length==1?"":"s")+" match \""+q+"\""):(list.length+" updates - newest first. Click one to see what changed.");
+    document.getElementById("hmeta").textContent=q?(hits.length+" update"+(hits.length==1?"":"s")+" match \""+q+"\""):(showAll?list.length+" updates - newest first. Click one to see what changed.":"The newest update. Earlier updates are below.");
     box.innerHTML=shown.map(function(e,i){
       var old=e.date==="Earlier";
       return '<details class="ver'+(i===0&&!q?" first":"")+(old?" old":"")+'"'+(i===0&&!q||q?" open":"")+'><summary><span class="badge">'+(app==="android"&&!/^\d+\./.test(e.v)?"v":"")+esc(e.v)+'</span><span class="vtxt"><b>'+hi(e.title,q)+(e.tags||[]).map(function(t){return'<span class="tag '+t+'">'+NAMES[t]+'</span>'}).join("")+'</b><small>'+(old?"Earlier versions":esc(e.date))+'</small></span><span class="chev">▼</span></summary><ul>'+e.items.map(function(it){return"<li>"+hi(it,q)+"</li>"}).join("")+'</ul></details>';
     }).join("")||'<p class="hmeta">Nothing found. Try another word.</p>';
-    if(!q&&!showAll&&hits.length>SHOW){var b=document.createElement("button");b.className="more";b.textContent="Show all "+hits.length+" updates ▾";b.onclick=function(){showAll=true;draw()};box.appendChild(b)}
+    if(!q&&hits.length>SHOW){var b=document.createElement("button");b.className="more";b.textContent=showAll?"Show less ▴":"Show earlier updates ("+(hits.length-SHOW)+") ▾";b.onclick=function(){showAll=!showAll;draw();if(!showAll)document.getElementById("history").scrollIntoView({behavior:"smooth"})};box.appendChild(b)}
   }
   document.querySelectorAll(".tabs button").forEach(function(b){b.onclick=function(){app=b.dataset.app;showAll=false;document.querySelectorAll(".tabs button").forEach(function(x){x.classList.toggle("on",x===b)});draw()}});
-  document.getElementById("hq").addEventListener("input",draw);
   fetch("history.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){data=d;draw()}).catch(function(){document.getElementById("hlist").innerHTML='<p class="hmeta">The update history could not be loaded right now.</p>'});
 })();
 </script>
