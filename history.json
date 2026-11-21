@@ -389,8 +389,10 @@
     {
       "v": "1.7.12",
       "date": "Nov 21, 2026",
-      "title": "Settings > Technical Support: a button opens the download…",
-      "tags": [],
+      "title": "Website button in Technical Support",
+      "tags": [
+        "new"
+      ],
       "items": [
         "Settings > Technical Support: a button opens the download page with the update history."
       ]
@@ -398,8 +400,11 @@
     {
       "v": "1.7.11",
       "date": "Nov 21, 2026",
-      "title": "Home: the mouse wheel over the sports card scrolls the ga…",
-      "tags": [],
+      "title": "Sharper look + wheel scrolling",
+      "tags": [
+        "look",
+        "fix"
+      ],
       "items": [
         "Home: the mouse wheel over the sports card scrolls the games list.",
         "Sharper look: Windows' own screen font (Segoe UI), smooth new Home icons, team logos at the size they are shown."
@@ -408,8 +413,10 @@
     {
       "v": "1.7.10",
       "date": "Nov 21, 2026",
-      "title": "Movies / Series: \"Recently added\" uses the same ✨ as the …",
-      "tags": [],
+      "title": "✨ Recently added icon",
+      "tags": [
+        "look"
+      ],
       "items": [
         "Movies / Series: \"Recently added\" uses the same ✨ as the TV app."
       ]
