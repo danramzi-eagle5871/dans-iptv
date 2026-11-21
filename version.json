@@ -1,9 +1,9 @@
 {
   "updated": "Nov 20, 2026",
   "android": {
-    "version": 155,
+    "version": 156,
     "updated": "Nov 20, 2026",
-    "notes": "Live TV: resting on a channel in the grid no longer adds it to Recently watched - only channels you open full screen are added.",
+    "notes": "TV remote: the fast-forward and rewind buttons now jump through long lists and poster grids (Live TV, Movies, Series, Settings).",
     "apk": "https://github.com/danramzi-eagle5871/dans-iptv/releases/latest/download/DansIPTV-Share.apk"
   },
   "windows": {
