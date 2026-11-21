@@ -1,9 +1,9 @@
 {
   "updated": "Nov 20, 2026",
   "android": {
-    "version": 147,
+    "version": 152,
     "updated": "Nov 20, 2026",
-    "notes": "Add a service with your provider: MAC Address + Device Key + QR code in Settings. Live TV grid plays the channel you rest on. New slim weather + clock bar. Clear watch history. Hide categories lists every account.",
+    "notes": "TV: Settings opens without a jump, Back keeps your place, Up returns to the top. Exit the app closes instantly. New compact sports card on the left: your teams with the day and time (countdown when it is soon) and a sport drop-down.",
     "apk": "https://github.com/danramzi-eagle5871/dans-iptv/releases/latest/download/DansIPTV-Share.apk"
   },
   "windows": {
