@@ -24,6 +24,42 @@ body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(14
 .support { text-align: center; margin-top: 28px; color: var(--muted); }
 a.email { color: var(--gold); }
 footer { text-align: center; color: rgb(132,148,168); font-size: 13px; margin-top: 38px; }
+/* update history */
+.hist { margin-top: 24px; padding: 22px 24px 18px; border: 1px solid rgb(52,70,90); border-radius: 18px; background: rgb(16,36,59); }
+.hist-head { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.hist-head h2 { color: var(--gold); margin: 0; font-size: 20px; flex: 1 1 auto; }
+.tabs { display: inline-flex; background: rgb(10,25,42); border: 1px solid rgb(52,70,90); border-radius: 999px; padding: 3px; }
+.tabs button { font: inherit; font-weight: bold; font-size: 14px; color: var(--muted); background: none; border: 0; border-radius: 999px; padding: 7px 16px; cursor: pointer; }
+.tabs button.on { background: var(--gold); color: rgb(16,26,40); }
+.hsearch { width: 100%; margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px; border: 1px solid rgb(52,70,90); background: rgb(10,25,42); color: #fff; font: inherit; font-size: 15px; }
+.hsearch:focus { outline: none; border-color: var(--gold); }
+.hmeta { color: rgb(132,148,168); font-size: 13px; margin: 6px 2px 10px; }
+.timeline { position: relative; padding-left: 26px; }
+.timeline::before { content: ''; position: absolute; left: 8px; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(var(--gold), rgba(216,180,90,0.08)); }
+.ver { position: relative; margin: 0 0 10px; border: 1px solid rgb(40,60,84); border-radius: 14px; background: rgb(12,29,48); transition: border-color .2s, background .2s; }
+.ver::before { content: ''; position: absolute; left: -23px; top: 19px; width: 10px; height: 10px; border-radius: 50%; background: rgb(12,29,48); border: 2px solid var(--gold); }
+.ver.first::before { background: var(--gold); box-shadow: 0 0 0 4px rgba(216,180,90,0.18); }
+.ver[open] { border-color: rgba(216,180,90,0.55); background: rgb(14,33,55); }
+.ver summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 12px 14px; }
+.ver summary::-webkit-details-marker { display: none; }
+.badge { flex: none; min-width: 64px; text-align: center; font-weight: bold; font-size: 14px; color: rgb(16,26,40); background: var(--gold); border-radius: 8px; padding: 4px 8px; }
+.ver.old .badge { background: transparent; color: var(--gold); border: 1px solid var(--gold); }
+.vtxt { flex: 1; min-width: 0; }
+.vtxt b { display: block; color: #fff; font-size: 16px; }
+.vtxt small { color: rgb(132,148,168); font-size: 13px; }
+.tag { display: inline-block; font-size: 11px; font-weight: bold; letter-spacing: .4px; border-radius: 999px; padding: 2px 8px; margin-left: 6px; vertical-align: 1px; }
+.tag.new { background: rgba(76,175,80,0.18); color: #8ee59a; }
+.tag.fix { background: rgba(79,195,247,0.16); color: #8fd8ff; }
+.tag.fast { background: rgba(255,183,77,0.16); color: #ffcf84; }
+.tag.look { background: rgba(186,104,200,0.18); color: #e2a8ee; }
+.chev { flex: none; color: var(--gold); transition: transform .2s; font-size: 14px; }
+.ver[open] .chev { transform: rotate(180deg); }
+.ver ul { margin: 0; padding: 0 18px 14px 96px; color: var(--muted); line-height: 1.55; }
+.ver li { margin: 3px 0; }
+.ver li::marker { color: var(--gold); }
+.more { display: block; margin: 6px auto 0; font: inherit; font-weight: bold; color: var(--gold); background: none; border: 1px solid var(--gold); border-radius: 9px; padding: 9px 18px; cursor: pointer; }
+mark { background: rgba(216,180,90,0.35); color: #fff; border-radius: 3px; }
+@media (max-width: 600px) { .ver ul { padding-left: 34px; } .badge { min-width: 52px; font-size: 13px; } .tag { display: none; } }
 </style></head><body><main class="wrap"><header class="hero"><h1>Dan's IPTV Player</h1><p>A simple IPTV player for your compatible devices. Choose your platform below to get the app.</p></header>
 <section class="posters"><img src="poster-english.jpg" alt="Dan's IPTV – Your Entertainment. Your Player. Available on Android TV, Amazon Fire TV and Android phones."></section>
 <section class="grid">
@@ -39,6 +75,34 @@ fetch("version.json",{cache:"no-store"}).then(function(r){return r.json()}).then
   document.getElementById("upd-notes").textContent=a.notes||"";
   var w=d.windows;if(w&&w.version)document.getElementById("upd-win").textContent="Windows version "+w.version+" • Updated "+(w.updated||d.updated||"");
 }).catch(function(){document.getElementById("upd-line").textContent="Updated regularly. Check this page for the newest version.";});
+</script>
+<section class="hist" id="history">
+<div class="hist-head"><h2>📜 Update history</h2><div class="tabs" role="tablist"><button class="on" data-app="android" role="tab">Android</button><button data-app="windows" role="tab">Windows</button></div></div>
+<input class="hsearch" id="hq" type="search" placeholder="Search the updates (for example: trailer, phone, series)" aria-label="Search the updates">
+<div class="hmeta" id="hmeta"></div>
+<div class="timeline" id="hlist"><p class="hmeta">Loading…</p></div>
+</section>
+<script>
+(function(){
+  var data=null, app="android", showAll=false, SHOW=8;
+  var NAMES={new:"NEW",fix:"FIXED",fast:"FASTER",look:"LOOK"};
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+  function hi(s,q){s=esc(s);if(!q)return s;var i=s.toLowerCase().indexOf(esc(q).toLowerCase());return i<0?s:s.slice(0,i)+"<mark>"+s.slice(i,i+q.length)+"</mark>"+s.slice(i+q.length)}
+  function draw(){
+    var q=document.getElementById("hq").value.trim(), list=(data&&data[app])||[], box=document.getElementById("hlist");
+    var hits=list.filter(function(e){if(!q)return true;var t=(e.v+" "+e.title+" "+e.items.join(" ")).toLowerCase();return t.indexOf(q.toLowerCase())>=0});
+    var shown=q||showAll?hits:hits.slice(0,SHOW);
+    document.getElementById("hmeta").textContent=q?(hits.length+" update"+(hits.length==1?"":"s")+" match \""+q+"\""):(list.length+" updates - newest first. Click one to see what changed.");
+    box.innerHTML=shown.map(function(e,i){
+      var old=e.date==="Earlier";
+      return '<details class="ver'+(i===0&&!q?" first":"")+(old?" old":"")+'"'+(i===0&&!q||q?" open":"")+'><summary><span class="badge">'+(app==="android"&&!/^\d+\./.test(e.v)?"v":"")+esc(e.v)+'</span><span class="vtxt"><b>'+hi(e.title,q)+(e.tags||[]).map(function(t){return'<span class="tag '+t+'">'+NAMES[t]+'</span>'}).join("")+'</b><small>'+(old?"Earlier versions":esc(e.date))+'</small></span><span class="chev">▼</span></summary><ul>'+e.items.map(function(it){return"<li>"+hi(it,q)+"</li>"}).join("")+'</ul></details>';
+    }).join("")||'<p class="hmeta">Nothing found. Try another word.</p>';
+    if(!q&&!showAll&&hits.length>SHOW){var b=document.createElement("button");b.className="more";b.textContent="Show all "+hits.length+" updates ▾";b.onclick=function(){showAll=true;draw()};box.appendChild(b)}
+  }
+  document.querySelectorAll(".tabs button").forEach(function(b){b.onclick=function(){app=b.dataset.app;showAll=false;document.querySelectorAll(".tabs button").forEach(function(x){x.classList.toggle("on",x===b)});draw()}});
+  document.getElementById("hq").addEventListener("input",draw);
+  fetch("history.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){data=d;draw()}).catch(function(){document.getElementById("hlist").innerHTML='<p class="hmeta">The update history could not be loaded right now.</p>'});
+})();
 </script>
 <div class="note"><strong>Important:</strong> Dan's IPTV is an IPTV player only. It does not provide channels, movies, TV shows, free content, or IPTV subscriptions. You must have an active subscription from a compatible third-party IPTV provider to log in and access content.</div>
 <div class="support">Technical support: <a class="email" href="mailto:danramzi@yahoo.com">danramzi@yahoo.com</a>   •   <a class="email" href="https://www.facebook.com/profile.php?id=61596412777334" target="_blank" rel="noopener">Facebook page</a>   •   <a class="email" href="https://t.me/drsaog?text=Hello%2C%20I%20need%20technical%20support%20for%20Dan%27s%20IPTV." target="_blank" rel="noopener">Telegram</a></div><footer>© Dan's IPTV Player</footer></main>
