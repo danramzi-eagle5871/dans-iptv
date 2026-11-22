@@ -10,6 +10,145 @@
       ]
     },
     {
+      "v": "168",
+      "date": "Nov 21, 2026",
+      "title": "Cinema Premiere, Prime-style",
+      "tags": [
+        "look"
+      ],
+      "items": [
+        "The new home is called Cinema Premiere.",
+        "A see-through menu in the middle of the top bar, stacked buttons and small dots for the featured titles.",
+        "Left / Right flip the featured title; each one stays 5 seconds.",
+        "Pressing Down moves the whole first page away so the rows have the full screen."
+      ]
+    },
+    {
+      "v": "167",
+      "date": "Nov 21, 2026",
+      "title": "Premiere: more for you",
+      "tags": [
+        "new"
+      ],
+      "items": [
+        "Because you watched, Recommended for you, Tonight's pick, Got 90 minutes, Epic Nights.",
+        "Popular actors and directors, and movie franchises, each with their titles from your library."
+      ]
+    },
+    {
+      "v": "166",
+      "date": "Nov 21, 2026",
+      "title": "Premiere: collections and genres",
+      "tags": [
+        "new"
+      ],
+      "items": [
+        "Award collections (Oscars, Golden Globes, Emmys), seasonal picks and a Browse by Genre row.",
+        "A full title page with cast, trailer and More like this.",
+        "Premiere is listed first in Settings > Themes."
+      ]
+    },
+    {
+      "v": "165",
+      "date": "Nov 21, 2026",
+      "title": "Premiere: faster and easier to move around",
+      "tags": [
+        "fast",
+        "fix"
+      ],
+      "items": [
+        "The Premiere home loads much faster and opens at once the next time.",
+        "The top menu can now be reached with the remote."
+      ]
+    },
+    {
+      "v": "164",
+      "date": "Nov 21, 2026",
+      "title": "New Premiere home (TV)",
+      "tags": [
+        "new",
+        "look"
+      ],
+      "items": [
+        "A new premium home for movies and series: a moving featured title, Top 10 rows and Continue watching.",
+        "TVs switch to it once; phones can choose it in Settings > Themes."
+      ]
+    },
+    {
+      "v": "163",
+      "date": "Nov 21, 2026",
+      "title": "Sports Hub: channels and alerts",
+      "tags": [
+        "new",
+        "fix"
+      ],
+      "items": [
+        "Shows which channels carry each game.",
+        "Remind me before a game starts, score alerts for your teams, and game highlights.",
+        "Today shows only today's games; a game page opens at the top."
+      ]
+    },
+    {
+      "v": "162",
+      "date": "Nov 21, 2026",
+      "title": "Sports Hub: real game clocks",
+      "tags": [
+        "fix"
+      ],
+      "items": [
+        "Live games show the real clock and period.",
+        "NFL and WNBA added; standings split into East / West conferences."
+      ]
+    },
+    {
+      "v": "161",
+      "date": "Nov 21, 2026",
+      "title": "New Sports Hub",
+      "tags": [
+        "new"
+      ],
+      "items": [
+        "A full Sports screen from Home and the side menu: scores, schedules, standings and team pages."
+      ]
+    },
+    {
+      "v": "160",
+      "date": "Nov 21, 2026",
+      "title": "Smoother sync and ratings for everyone",
+      "tags": [
+        "fix",
+        "fast"
+      ],
+      "items": [
+        "Continue watching sync is lighter and only downloads your list when something changed.",
+        "IMDb scores use their own service for the public app."
+      ]
+    },
+    {
+      "v": "159",
+      "date": "Nov 21, 2026",
+      "title": "Live games on the sports card",
+      "tags": [
+        "look"
+      ],
+      "items": [
+        "A live game of your teams looks like the live games list (score in the middle, clock under it).",
+        "Tighter spacing on the home sports card."
+      ]
+    },
+    {
+      "v": "158",
+      "date": "Nov 21, 2026",
+      "title": "Easier TV Settings",
+      "tags": [
+        "fix"
+      ],
+      "items": [
+        "In TV Settings, Left / Right stay in the row and never jump to another row.",
+        "The side menu no longer opens from Settings; Back goes Home."
+      ]
+    },
+    {
       "v": "157",
       "date": "Nov 21, 2026",
       "title": "One Back button for every phone",
@@ -84,6 +223,52 @@
       ]
     },
     {
+      "v": "151",
+      "date": "Nov 20, 2026",
+      "title": "Settings opens without a jump",
+      "tags": [
+        "fix"
+      ],
+      "items": [
+        "TV Settings opens calmly with no sliding; Back closes an open form first."
+      ]
+    },
+    {
+      "v": "150",
+      "date": "Nov 20, 2026",
+      "title": "Settings Up / Down without flicker",
+      "tags": [
+        "fix"
+      ],
+      "items": [
+        "Up / Down in TV Settings jump straight to the next row, with no flicker."
+      ]
+    },
+    {
+      "v": "149",
+      "date": "Nov 20, 2026",
+      "title": "Exit fixes",
+      "tags": [
+        "fix"
+      ],
+      "items": [
+        "The Exit the app? question now closes the app on Yes, and starts on No."
+      ]
+    },
+    {
+      "v": "148",
+      "date": "Nov 20, 2026",
+      "title": "Exit question + one sports card",
+      "tags": [
+        "new",
+        "look"
+      ],
+      "items": [
+        "Back on Home asks \"Exit the app?\" so a second Back by mistake never closes it.",
+        "One sports card with team logos; the hourly weather line is gone."
+      ]
+    },
+    {
       "v": "147",
       "date": "Nov 20, 2026",
       "title": "Add a service with your provider",
@@ -96,6 +281,41 @@
         "Live TV grid plays the channel you rest on, inside its tile.",
         "New slim weather + clock bar.",
         "Hide categories lists every saved account."
+      ]
+    },
+    {
+      "v": "146",
+      "date": "Nov 20, 2026",
+      "title": "Add with Device ID and Device Key",
+      "tags": [
+        "new"
+      ],
+      "items": [
+        "Each TV shows its own Device ID and Device Key, so a provider's website can add your playlist."
+      ]
+    },
+    {
+      "v": "145",
+      "date": "Nov 20, 2026",
+      "title": "Hide categories for every service",
+      "tags": [
+        "fix"
+      ],
+      "items": [
+        "Hide categories now lists every saved account and playlist."
+      ]
+    },
+    {
+      "v": "144",
+      "date": "Nov 20, 2026",
+      "title": "Live preview in the channel grid",
+      "tags": [
+        "new",
+        "look"
+      ],
+      "items": [
+        "In Grid view the channel you rest on plays inside its tile.",
+        "Weather and clock in one glass card on the TV home."
       ]
     },
     {
@@ -148,6 +368,17 @@
       ]
     },
     {
+      "v": "139",
+      "date": "Nov 19, 2026",
+      "title": "My TV services in Settings",
+      "tags": [
+        "look"
+      ],
+      "items": [
+        "One clear \"My TV services\" section at the top of TV Settings."
+      ]
+    },
+    {
       "v": "138",
       "date": "Nov 19, 2026",
       "title": "Your login is always safe",
@@ -168,6 +399,28 @@
       ],
       "items": [
         "TV: sign in or add a playlist from your phone by scanning a QR code."
+      ]
+    },
+    {
+      "v": "136",
+      "date": "Nov 19, 2026",
+      "title": "Add a playlist with your phone",
+      "tags": [
+        "new"
+      ],
+      "items": [
+        "Scan a QR code on the TV and type the playlist name and link on your phone."
+      ]
+    },
+    {
+      "v": "135",
+      "date": "Nov 19, 2026",
+      "title": "Phone sign-in easier to find",
+      "tags": [
+        "look"
+      ],
+      "items": [
+        "\"Sign in with your phone\" now sits at the top of TV Settings."
       ]
     },
     {
@@ -274,6 +527,17 @@
       ]
     },
     {
+      "v": "125",
+      "date": "Nov 18, 2026",
+      "title": "Update window fits phones",
+      "tags": [
+        "fix"
+      ],
+      "items": [
+        "On phones the update window always fits, with the Download and install button visible."
+      ]
+    },
+    {
       "v": "124",
       "date": "Nov 18, 2026",
       "title": "Account name",
@@ -306,6 +570,18 @@
         "The Technical Support window fits every TV.",
         "Hide categories: Done keeps you on that row.",
         "Updates are checked from this download page."
+      ]
+    },
+    {
+      "v": "121",
+      "date": "Nov 17, 2026",
+      "title": "Support window fixes",
+      "tags": [
+        "fix"
+      ],
+      "items": [
+        "The Technical Support window keeps its title and text in view.",
+        "Done in Hide categories stays on its row."
       ]
     },
     {
@@ -395,6 +671,31 @@
     }
   ],
   "windows": [
+    {
+      "v": "1.7.14",
+      "date": "Nov 21, 2026",
+      "title": "Smoother sync and ratings for everyone",
+      "tags": [
+        "fix",
+        "fast"
+      ],
+      "items": [
+        "Continue watching sync is lighter: it only downloads your list when something changed, so it keeps working smoothly for everyone.",
+        "IMDb scores are remembered on your PC for a week, so title pages open with the score right away."
+      ]
+    },
+    {
+      "v": "1.7.13",
+      "date": "Nov 21, 2026",
+      "title": "Live games on the sports card",
+      "tags": [
+        "look"
+      ],
+      "items": [
+        "Home sports card: a live game of your teams now looks like the live games in the list (score in the middle, game clock under it, in red).",
+        "Home sports card: tighter spacing, so more games fit without scrolling."
+      ]
+    },
     {
       "v": "1.7.12",
       "date": "Nov 21, 2026",
