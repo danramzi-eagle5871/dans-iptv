@@ -1,6 +1,22 @@
 {
   "android": [
     {
+      "v": "170",
+      "date": "Nov 21, 2026",
+      "title": "Cinema Premiere polish",
+      "tags": [
+        "look",
+        "fix"
+      ],
+      "items": [
+        "TV: the Premiere home opens on the top bar, so the whole first page shows.",
+        "Smaller Watch now / More info / My List buttons; Down from My List starts at Continue watching.",
+        "The top bar only moves Left and Right and never jumps to the other end.",
+        "One smooth background under the first page.",
+        "Going back up on any Premiere page now shows it all the way to the top."
+      ]
+    },
+    {
       "v": "169",
       "date": "Nov 21, 2026",
       "title": "Cinema Premiere and Sports Hub",
