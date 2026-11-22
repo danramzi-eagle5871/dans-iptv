@@ -1,9 +1,9 @@
 {
   "updated": "Nov 22, 2026",
   "android": {
-    "version": 176,
+    "version": 182,
     "updated": "Nov 22, 2026",
-    "notes": "Fixed: the app could close while the Premiere home was loading. Lists load with much less memory.",
+    "notes": "Faster and smoother, bigger highlight, Back to the same title.",
     "apk": "https://github.com/danramzi-eagle5871/dans-iptv/releases/latest/download/DansIPTV-Share.apk"
   },
   "windows": {

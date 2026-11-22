@@ -1,6 +1,81 @@
 {
   "android": [
     {
+      "v": "182",
+      "date": "Nov 22, 2026",
+      "title": "Bigger highlight",
+      "tags": [
+        "look"
+      ],
+      "items": [
+        "Premiere: the highlighted poster, card, collection or group pops out bigger, so it is easy to see where you are."
+      ]
+    },
+    {
+      "v": "181",
+      "date": "Nov 22, 2026",
+      "title": "Back to the same title, no flicker",
+      "tags": [
+        "fix",
+        "look"
+      ],
+      "items": [
+        "Title pages: after opening a title from \"More like this\", Back returns to the same tile on that row - no flicker, no jump to the top.",
+        "Cast & Crew and More like this rows remember how far you scrolled.",
+        "Settings: the clock is now a simple \"24-hour clock\" On / Off switch."
+      ]
+    },
+    {
+      "v": "180",
+      "date": "Nov 22, 2026",
+      "title": "Faster, smoother Premiere",
+      "tags": [
+        "fast",
+        "fix"
+      ],
+      "items": [
+        "Title pages open at once again (no more waiting, no more being thrown back to Home).",
+        "The whole app runs faster on big services: titles are matched much more quickly and with less work.",
+        "Up and down on the Premiere home: one smooth glide, every time.",
+        "The version date on the home screen is correct again."
+      ]
+    },
+    {
+      "v": "179",
+      "date": "Nov 22, 2026",
+      "title": "12 or 24-hour clock",
+      "tags": [
+        "new"
+      ],
+      "items": [
+        "Settings: choose a 12-hour (3:45 PM) or 24-hour (15:45) clock. Every clock and game time in the app follows it."
+      ]
+    },
+    {
+      "v": "178",
+      "date": "Nov 22, 2026",
+      "title": "Smooth up and down",
+      "tags": [
+        "fast",
+        "fix"
+      ],
+      "items": [
+        "Premiere home: moving up and down is now one quick, smooth glide - no more jitter. Each row moves to the top of the screen."
+      ]
+    },
+    {
+      "v": "177",
+      "date": "Nov 22, 2026",
+      "title": "Small loading fix",
+      "tags": [
+        "fix"
+      ],
+      "items": [
+        "A section with no titles now simply shows as empty.",
+        "Safety guard: if the Premiere home ever fails to load twice, it pauses for a day so the rest of the app keeps working."
+      ]
+    },
+    {
       "v": "176",
       "date": "Nov 22, 2026",
       "title": "Premiere home no longer closes the app",
