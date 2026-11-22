@@ -1,9 +1,9 @@
 {
   "updated": "Nov 21, 2026",
   "android": {
-    "version": 157,
+    "version": 169,
     "updated": "Nov 21, 2026",
-    "notes": "Phones: one round Back button that looks the same on every phone (black circle, light-blue ring, white arrow).",
+    "notes": "New Cinema Premiere home on TVs and a full Sports Hub.",
     "apk": "https://github.com/danramzi-eagle5871/dans-iptv/releases/latest/download/DansIPTV-Share.apk"
   },
   "windows": {
