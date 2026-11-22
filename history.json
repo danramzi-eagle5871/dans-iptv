@@ -1,6 +1,19 @@
 {
   "android": [
     {
+      "v": "176",
+      "date": "Nov 22, 2026",
+      "title": "Premiere home no longer closes the app",
+      "tags": [
+        "fix",
+        "fast"
+      ],
+      "items": [
+        "Fixed: on some TVs the app closed itself while the Premiere home was loading.",
+        "Movie and series lists load with much less memory, so big services work smoothly."
+      ]
+    },
+    {
       "v": "175",
       "date": "Nov 22, 2026",
       "title": "More space between tiles",
