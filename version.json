@@ -1,9 +1,9 @@
 {
   "updated": "Nov 22, 2026",
   "android": {
-    "version": 182,
+    "version": 183,
     "updated": "Nov 22, 2026",
-    "notes": "Faster and smoother, bigger highlight, Back to the same title.",
+    "notes": "Cleaner rows, website link, Premiere home on phones.",
     "apk": "https://github.com/danramzi-eagle5871/dans-iptv/releases/latest/download/DansIPTV-Share.apk"
   },
   "windows": {

@@ -1,6 +1,21 @@
 {
   "android": [
     {
+      "v": "183",
+      "date": "Nov 22, 2026",
+      "title": "Cleaner rows + website link",
+      "tags": [
+        "look",
+        "new"
+      ],
+      "items": [
+        "Premiere on TV: a little more space between each row title and its cards, the same in every row.",
+        "Phones: the volume button in the player no longer covers the time.",
+        "Technical Support: a Website button and QR code (downloads and update history).",
+        "Phones: after this update the app opens on the Cinema Premiere home once (you can still pick another look in Settings > Themes)."
+      ]
+    },
+    {
       "v": "182",
       "date": "Nov 22, 2026",
       "title": "Bigger highlight",
