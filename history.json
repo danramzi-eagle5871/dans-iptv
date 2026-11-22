@@ -1,6 +1,77 @@
 {
   "android": [
     {
+      "v": "175",
+      "date": "Nov 22, 2026",
+      "title": "More space between tiles",
+      "tags": [
+        "look"
+      ],
+      "items": [
+        "Premiere: tiles keep a clear space between them, also when highlighted, like Apple TV."
+      ]
+    },
+    {
+      "v": "174",
+      "date": "Nov 22, 2026",
+      "title": "Opens the right movie or series",
+      "tags": [
+        "fix",
+        "look"
+      ],
+      "items": [
+        "Premiere now opens the exact movie or series from your service (the 2026 one, not an older title with the same name), for every provider.",
+        "Apple TV-style cards: no frame, a soft shadow and a small Movie / Series line on the highlighted poster.",
+        "Cast & Crew with plain round photos, like Apple TV."
+      ]
+    },
+    {
+      "v": "173",
+      "date": "Nov 22, 2026",
+      "title": "Back to your highlights",
+      "tags": [
+        "fix"
+      ],
+      "items": [
+        "Sports Hub: after watching a game highlight, Back returns to the Highlights tab on the same clip."
+      ]
+    },
+    {
+      "v": "172",
+      "date": "Nov 22, 2026",
+      "title": "Apple TV-style highlight",
+      "tags": [
+        "look",
+        "new"
+      ],
+      "items": [
+        "Premiere: the highlighted poster pops out with a soft shadow, like Apple TV.",
+        "IMDb scores on the featured titles and title pages.",
+        "Continue watching shows the whole poster.",
+        "New Collections design: words and posters side by side, never overlapping.",
+        "Up from My List goes to More info, then Watch now, then the top bar."
+      ]
+    },
+    {
+      "v": "171",
+      "date": "Nov 22, 2026",
+      "title": "Premiere: Sports, Back and title pages",
+      "tags": [
+        "new",
+        "fix"
+      ],
+      "items": [
+        "Sports in the Premiere top bar.",
+        "Back takes you to the same row and tile you were on, not the top bar.",
+        "Watch now is outlined like More info until you highlight it.",
+        "Title pages show the whole cast row on the first screen.",
+        "Highlighted tiles never get cut off at the edge of the TV.",
+        "Phones: volume control in the player (speaker button, slider panel, mute, or slide along the right edge).",
+        "Phones: Sports Hub buttons show every word; big scores stay on one line.",
+        "Phones: cleaner Collections cards, Tonight's Pick tiles and page titles."
+      ]
+    },
+    {
       "v": "170",
       "date": "Nov 21, 2026",
       "title": "Cinema Premiere polish",

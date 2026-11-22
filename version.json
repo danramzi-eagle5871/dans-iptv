@@ -1,9 +1,9 @@
 {
-  "updated": "Nov 21, 2026",
+  "updated": "Nov 22, 2026",
   "android": {
-    "version": 170,
-    "updated": "Nov 21, 2026",
-    "notes": "Premiere home opens on the top bar, smaller buttons, one smooth background and better scrolling.",
+    "version": 175,
+    "updated": "Nov 22, 2026",
+    "notes": "Premiere opens the exact movie or series from your service, Apple TV-style cards and cast, more space between tiles, phone volume control.",
     "apk": "https://github.com/danramzi-eagle5871/dans-iptv/releases/latest/download/DansIPTV-Share.apk"
   },
   "windows": {
