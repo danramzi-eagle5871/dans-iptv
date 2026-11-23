@@ -1,6 +1,146 @@
 {
   "android": [
     {
+      "v": "193",
+      "date": "Nov 22, 2026",
+      "title": "Keyboard fixed, neater Top 10 and Settings",
+      "tags": [
+        "fix",
+        "look"
+      ],
+      "items": [
+        "Search keyboard: round capsule keys again, and the key you are on lights up and pops, so typing is easy to follow.",
+        "Top 10: every number is the same size, and number 1 always comes back with the same space at the left edge.",
+        "Settings: a more compact group list and a wider right side, so nothing is cut off."
+      ]
+    },
+    {
+      "v": "192",
+      "date": "Nov 22, 2026",
+      "title": "Settings polish",
+      "tags": [
+        "fix",
+        "look"
+      ],
+      "items": [
+        "Settings: every group lines up neatly, the sports buttons wrap instead of being cut off, and the stream format and keyboard switches are shorter and clearer."
+      ]
+    },
+    {
+      "v": "191",
+      "date": "Nov 22, 2026",
+      "title": "New Settings, tidier top bar and keyboard",
+      "tags": [
+        "new",
+        "look",
+        "fix"
+      ],
+      "items": [
+        "Settings on TV are redesigned in groups: My TV services, Home screen, Playback, Content & search, Internet, and Help & about. Pick a group on the left and its settings show on the right in soft cards.",
+        "Help & about now shows the app version and date.",
+        "Cinema Premiere: the top bar no longer runs over the \"Cinema Premiere\" name.",
+        "Top 10: the big number 10 now shows beside its poster.",
+        "Search keyboard: all the symbols of the TV keyboard, wider buttons for Space, Clear, 123 and Arabic, and one calm dark background."
+      ]
+    },
+    {
+      "v": "190",
+      "date": "Nov 22, 2026",
+      "title": "Our own search keyboard",
+      "tags": [
+        "new"
+      ],
+      "items": [
+        "Cinema Premiere Search has its own keyboard on TV: rounded keys in English or Arabic, a 123 page, title suggestions while you type, your recent searches, and the most likely next letters glow gold.",
+        "Arabic is shown in the Noto Naskh Arabic font, and words spelled with or without hamza still match.",
+        "Settings: switch between Dan's IPTV keyboard and the TV keyboard."
+      ]
+    },
+    {
+      "v": "189",
+      "date": "Nov 22, 2026",
+      "title": "Clearer settings, steady click",
+      "tags": [
+        "fix",
+        "look"
+      ],
+      "items": [
+        "Technical Support: the Website button and code open the top of the website.",
+        "Settings: Today's games and Score cards now say clearly that they show on the photo themes only.",
+        "Photo themes: the click sound of the bottom bar now plays on every move, slow or fast."
+      ]
+    },
+    {
+      "v": "188",
+      "date": "Nov 22, 2026",
+      "title": "Choose a version - every time",
+      "tags": [
+        "fix",
+        "new"
+      ],
+      "items": [
+        "The \"Choose a version\" window now shows every time a movie or series has several versions, also right after the app starts.",
+        "Resume (Continue watching) offers the versions too: keep watching the same one, or switch to another version at the same point."
+      ]
+    },
+    {
+      "v": "187",
+      "date": "Nov 22, 2026",
+      "title": "Search in Cinema Premiere",
+      "tags": [
+        "new",
+        "fix"
+      ],
+      "items": [
+        "Cinema Premiere: a Search button in the top bar - find any movie or series in your library while you type.",
+        "Collection titles never split a word.",
+        "The version list no longer shows the provider's star symbols.",
+        "Cast & Crew: no grey box behind the highlighted actor."
+      ]
+    },
+    {
+      "v": "186",
+      "date": "Nov 22, 2026",
+      "title": "Faster, smoother movement",
+      "tags": [
+        "fast",
+        "fix"
+      ],
+      "items": [
+        "Highlighted tiles pop out quicker, like Apple TV.",
+        "The soft background behind the Premiere rows costs the TV much less work while you move.",
+        "Fixed: the test version 185 did not open on some TVs."
+      ]
+    },
+    {
+      "v": "185",
+      "date": "Nov 22, 2026",
+      "title": "Test version (not released)",
+      "tags": [
+        "fast"
+      ],
+      "items": [
+        "A smaller test build; it did not open on some TVs and was replaced by 186.",
+        "Highlighted tiles pop out quicker, like Apple TV.",
+        "The soft background behind the Premiere rows costs the TV much less work while you move."
+      ]
+    },
+    {
+      "v": "184",
+      "date": "Nov 22, 2026",
+      "title": "Choose a version",
+      "tags": [
+        "new",
+        "look"
+      ],
+      "items": [
+        "When your service has the same movie or series more than once (4K, Full HD, HD, with or without subtitles, dubbed...), Play now lets you choose the version you want.",
+        "Title pages show how many versions are available.",
+        "Popular Actors and Directors: a \"See more\" tile opens a full page with many more actors and directors from your library.",
+        "Cleaner actor circles (no grey box when highlighted) and collection titles that never split a word."
+      ]
+    },
+    {
       "v": "183",
       "date": "Nov 22, 2026",
       "title": "Cleaner rows + website link",
