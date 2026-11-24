@@ -1,6 +1,101 @@
 {
   "android": [
     {
+      "v": "199",
+      "date": "Nov 24, 2026",
+      "title": "The same icons on every device",
+      "tags": [
+        "look",
+        "fix"
+      ],
+      "items": [
+        "The app's icons now look exactly the same on every TV and phone.",
+        "Settings: a clear blue sign for About.",
+        "Live TV: a smaller clock and date under the preview.",
+        "Phone: going back in the Premiere theme returns you to the same row instead of the top."
+      ]
+    },
+    {
+      "v": "198",
+      "date": "Nov 24, 2026",
+      "title": "Live TV that remembers your channel",
+      "tags": [
+        "fix",
+        "new"
+      ],
+      "items": [
+        "Live TV: going back to the channels (Right from the groups, or Left from the preview) lands on the channel you were on.",
+        "Live TV: the channel list moves in whole rows and always starts at the top - no more skipped or half rows.",
+        "Live TV: with the TV guide on, the clock and date under the preview always show.",
+        "TV guide: turning it off and on again shows the programmes right away.",
+        "Browse by Genre: each genre now shows every movie and series from all your TV services, not just the first 120 / 80.",
+        "Collections (Hidden Gems, Cult Classics, Family Movie Night and more) keep growing with every match from all your TV services."
+      ]
+    },
+    {
+      "v": "197",
+      "date": "Nov 24, 2026",
+      "title": "Smoother Settings, guide and windows",
+      "tags": [
+        "fix",
+        "look"
+      ],
+      "items": [
+        "Speed test: the needle no longer covers the speed numbers, and the result tiles show the full number.",
+        "TV guide: programmes never draw on top of each other.",
+        "TV guide: no box above the time grid, and Right from the groups goes straight to the channels.",
+        "Picture size and Subtitles windows close with one press of Back.",
+        "Exit: one press of Yes closes the app, cleanly.",
+        "Settings: no more jiggling while moving up and down; a headset icon for Help & about.",
+        "Title pages open at the top again (Back from \"More like this\" still returns to where you were).",
+        "Actors and Directors page: sorted A to Z."
+      ]
+    },
+    {
+      "v": "196",
+      "date": "Nov 23, 2026",
+      "title": "A TV guide for every service",
+      "tags": [
+        "new"
+      ],
+      "items": [
+        "TV guide: when your service sends no program information, the app now finds the guide by itself from the free Dan's IPTV guide (Arabic channels such as MBC, Rotana and beIN, the USA, the UK, Canada, all of Europe and many more countries). Turn it on in Settings > Playback.",
+        "Works for M3U playlists too, and channels shown a few hours later (like \"-6/hr\") get their times shifted.",
+        "Settings: a new speedometer for the internet speed test, room under the last row of every group, the score-card buttons no longer cut off, and a clearer Help & about icon.",
+        "Subtitles & audio: a neater window with shorter language names."
+      ]
+    },
+    {
+      "v": "195",
+      "date": "Nov 23, 2026",
+      "title": "Faster genres, every version from every account",
+      "tags": [
+        "fix",
+        "fast"
+      ],
+      "items": [
+        "Cinema Premiere: \"Choose a version\" now finds the copies on all your accounts, matched by the movie's own database number.",
+        "Browse by Genre opens quickly again, and the app uses much less memory with several accounts.",
+        "The \"Recently Added\" row is gone from the Premiere home.",
+        "Subtitles & audio: one press of Back closes the window."
+      ]
+    },
+    {
+      "v": "194",
+      "date": "Nov 23, 2026",
+      "title": "TV guide, subtitle languages, all your accounts",
+      "tags": [
+        "new",
+        "fast"
+      ],
+      "items": [
+        "TV guide: see what is on now and next in Live TV, plus a new Guide view with a time grid. Turn it on in Settings > Playback (off by default).",
+        "Movies and series: a \"Subtitles & audio\" button lets you pick the subtitle language (or Off) and the sound language when the video has them. Your choice is remembered.",
+        "Cinema Premiere now looks in all your Xtream accounts, and \"Choose a version\" shows which account each copy is on. Switching the account in use no longer causes errors.",
+        "Smoother on slower TVs: pictures of the next rows load ahead, rows are prepared before you reach them, and a Slow-TV mode gives older TVs a lighter look (automatic)."
+      ]
+    },
+    {
       "v": "193",
       "date": "Nov 22, 2026",
       "title": "Keyboard fixed, neater Top 10 and Settings",
