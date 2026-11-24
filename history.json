@@ -1,6 +1,32 @@
 {
   "android": [
     {
+      "v": "201",
+      "date": "Nov 24, 2026",
+      "title": "Back to the same poster",
+      "tags": [
+        "fix"
+      ],
+      "items": [
+        "Genre, collection, actor and franchise pages: going back from a movie returns you to the same poster.",
+        "Pages with only movies or only series now show their total too.",
+        "Poster pages: a slim bar stays at the top while you scroll, with the page name, the total and the highlighted title.",
+        "Live TV: no more empty space above the channels."
+      ]
+    },
+    {
+      "v": "200",
+      "date": "Nov 24, 2026",
+      "title": "Sports buttons",
+      "tags": [
+        "look"
+      ],
+      "items": [
+        "Sports: the buttons are round and easy to read again, and the team name is never cut off.",
+        "Sports: the Remind me button is gone."
+      ]
+    },
+    {
       "v": "199",
       "date": "Nov 24, 2026",
       "title": "The same icons on every device",

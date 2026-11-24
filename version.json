@@ -1,9 +1,9 @@
 {
   "updated": "Nov 23, 2026",
   "android": {
-    "version": 199,
+    "version": 201,
     "updated": "Nov 23, 2026",
-    "notes": "TV guide, faster Live TV and the same icons everywhere",
+    "notes": "Info bar on poster pages, back to the same poster",
     "apk": "https://github.com/danramzi-eagle5871/dans-iptv/releases/latest/download/DansIPTV-Share.apk"
   },
   "windows": {
