@@ -1,6 +1,78 @@
 {
   "android": [
     {
+      "v": "227",
+      "date": "Nov 25, 2026",
+      "title": "New name on the phone start-up",
+      "tags": [
+        "look"
+      ],
+      "items": [
+        "Phones: the start-up animation shows the new name, Cinema Premiere IPTV Player"
+      ]
+    },
+    {
+      "v": "226",
+      "date": "Nov 25, 2026",
+      "title": "A new name: Cinema Premiere IPTV Player",
+      "tags": [
+        "look"
+      ],
+      "items": [
+        "The app is now called Cinema Premiere IPTV Player (in your apps list, Settings and Help & about)"
+      ]
+    },
+    {
+      "v": "225",
+      "date": "Nov 25, 2026",
+      "title": "Phone top bar and a darker side menu",
+      "tags": [
+        "look"
+      ],
+      "items": [
+        "Phones: when you scroll the Cinema Premiere home, a see-through bar with Cinema Premiere and Search stays at the top",
+        "Android TV: the Cinema Premiere side menu is darker, so the words stand out"
+      ]
+    },
+    {
+      "v": "224",
+      "date": "Nov 25, 2026",
+      "title": "Search posters appear faster",
+      "tags": [
+        "fast"
+      ],
+      "items": [
+        "Search: posters of the results now appear much faster, also for titles that have no picture from your service"
+      ]
+    },
+    {
+      "v": "223",
+      "date": "Nov 25, 2026",
+      "title": "A brand-new, fast Search",
+      "tags": [
+        "new",
+        "fast"
+      ],
+      "items": [
+        "Android TV: a new Search screen - small keyboard on the left, posters on the right, and the highlighted poster shows its story, year, length and genres",
+        "Search is now much faster: results appear as you type",
+        "Search looks only in movies and series (all your TV services)"
+      ]
+    },
+    {
+      "v": "222",
+      "date": "Nov 25, 2026",
+      "title": "Search everything",
+      "tags": [
+        "new"
+      ],
+      "items": [
+        "Search now finds movies, series AND live channels in all your TV services",
+        "TV: a \"See all results\" button jumps straight to the full list",
+        "Phones: a search button at the top of the Cinema Premiere home"
+      ]
+    },
+    {
       "v": "221",
       "date": "Nov 25, 2026",
       "title": "Score cards: pick your team on the TV",
