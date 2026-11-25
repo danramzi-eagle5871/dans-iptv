@@ -1,6 +1,18 @@
 {
   "android": [
     {
+      "v": "221",
+      "date": "Nov 25, 2026",
+      "title": "Score cards: pick your team on the TV",
+      "tags": [
+        "fix"
+      ],
+      "items": [
+        "Settings > Home screen > Score cards: pressing a league now opens its team list on Android TV",
+        "Phones: long collection names (like \"Critically Acclaimed Series\") now have comfortable space between their lines"
+      ]
+    },
+    {
       "v": "220",
       "date": "Nov 25, 2026",
       "title": "A cleaner Cinema Premiere",
