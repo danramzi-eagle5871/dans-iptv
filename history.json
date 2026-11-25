@@ -1,6 +1,249 @@
 {
   "android": [
     {
+      "v": "220",
+      "date": "Nov 25, 2026",
+      "title": "A cleaner Cinema Premiere",
+      "tags": [
+        "look"
+      ],
+      "items": [
+        "Cinema Premiere: the side menu now stays hidden; a tiny arrow at the left edge shows it is there - press Left at the start of a row to open it",
+        "The rows now line up exactly with the featured movies and series at the top"
+      ]
+    },
+    {
+      "v": "219",
+      "date": "Nov 25, 2026",
+      "title": "Movie pages load their details again",
+      "tags": [
+        "fix",
+        "fast"
+      ],
+      "items": [
+        "Movie and series pages load their details, cast and awards right away again (a slow answer is tried again before giving up)",
+        "The poster safety net now works quietly in the background, one title at a time, and never slows the app",
+        "A picture is replaced only when it is really missing, not when the TV is just busy"
+      ]
+    },
+    {
+      "v": "218",
+      "date": "Nov 24, 2026",
+      "title": "Posters everywhere",
+      "tags": [
+        "fix"
+      ],
+      "items": [
+        "Movies and Series: a title without a picture, or with a broken one, now shows its official poster from the movie database."
+      ]
+    },
+    {
+      "v": "217",
+      "date": "Nov 24, 2026",
+      "title": "A poster for every title",
+      "tags": [
+        "fix"
+      ],
+      "items": [
+        "Cinema Premiere: a movie or series without a picture from your TV service now gets its official poster from the movie database."
+      ]
+    },
+    {
+      "v": "216",
+      "date": "Nov 24, 2026",
+      "title": "Back to the top, and every award poster",
+      "tags": [
+        "fix",
+        "new"
+      ],
+      "items": [
+        "Cinema Premiere: Back anywhere in the rows takes you straight to the top; Back again asks to exit.",
+        "Oscar, Emmy and Golden Globe collections now always show their posters.",
+        "The highlighted poster pops out a little more, while the others dim gently.",
+        "Movies: one press of Back closes the \"Continue or start from the beginning\" box.",
+        "The first screen now features up to 10 movies and shows."
+      ]
+    },
+    {
+      "v": "215",
+      "date": "Nov 24, 2026",
+      "title": "Gentler spotlight and 10 featured titles",
+      "tags": [
+        "fix",
+        "fast",
+        "new"
+      ],
+      "items": [
+        "Cinema Premiere: the other posters dim more gently around the one you are on.",
+        "Posters and cards that did not load the first time are tried again, so they no longer stay empty.",
+        "Movies: one press of Back now closes the \"Continue or start from the beginning\" box.",
+        "Cinema Premiere: the first screen now features up to 10 movies and shows."
+      ]
+    },
+    {
+      "v": "214",
+      "date": "Nov 24, 2026",
+      "title": "Always know where you are",
+      "tags": [
+        "look"
+      ],
+      "items": [
+        "Cinema Premiere: the poster or card you are on glows softly, and the others dim gently, so the highlight is easy to spot."
+      ]
+    },
+    {
+      "v": "213",
+      "date": "Nov 24, 2026",
+      "title": "A smaller, lighter side menu",
+      "tags": [
+        "look",
+        "fast"
+      ],
+      "items": [
+        "Cinema Premiere: the side menu is smaller, without Home, and the white highlight is just as wide as the word.",
+        "Coming back from Live TV, Movies or Series returns you to the same row.",
+        "Smoother: background work pauses while you move around."
+      ]
+    },
+    {
+      "v": "212",
+      "date": "Nov 24, 2026",
+      "title": "A more polished side menu",
+      "tags": [
+        "look"
+      ],
+      "items": [
+        "Cinema Premiere: the side menu icons appear as soon as you reach the rows, and the rows move aside so nothing overlaps.",
+        "The menu now opens from the centre with a smooth, gentle pop."
+      ]
+    },
+    {
+      "v": "211",
+      "date": "Nov 24, 2026",
+      "title": "A slim side menu in Cinema Premiere",
+      "tags": [
+        "new"
+      ],
+      "items": [
+        "Cinema Premiere: when you scroll down, small icons wait at the left; press Left to open the menu (Live TV, Movies, Series, Sports, Search, Settings).",
+        "Closing the menu takes you back to the same tile."
+      ]
+    },
+    {
+      "v": "210",
+      "date": "Nov 24, 2026",
+      "title": "Weather and clock in Cinema Premiere",
+      "tags": [
+        "look"
+      ],
+      "items": [
+        "Cinema Premiere: the top right now shows the weather, the time and the date in a slim gold design."
+      ]
+    },
+    {
+      "v": "209",
+      "date": "Nov 24, 2026",
+      "title": "Clearer Sports note on phones",
+      "tags": [
+        "fix"
+      ],
+      "items": [
+        "Phone Settings: \"Sports on the home screen\" now says these cards are not on the Cinema Premiere home."
+      ]
+    },
+    {
+      "v": "208",
+      "date": "Nov 24, 2026",
+      "title": "Small clock in Settings, tidier buttons",
+      "tags": [
+        "look",
+        "fix"
+      ],
+      "items": [
+        "Settings: a small clock and date at the top right (it follows the 24-hour setting).",
+        "Phone: on a movie or series page, Watch now is never cut off.",
+        "Sports: during a live game the buttons are the same size as before the game.",
+        "Sports: no more score pop-up box at the top right."
+      ]
+    },
+    {
+      "v": "207",
+      "date": "Nov 24, 2026",
+      "title": "A simpler top menu",
+      "tags": [
+        "look"
+      ],
+      "items": [
+        "Premiere home: the top menu no longer has a Home button (you are already on Home).",
+        "Collection cards no longer show a title count; the total is shown inside each collection."
+      ]
+    },
+    {
+      "v": "206",
+      "date": "Nov 24, 2026",
+      "title": "Smooth version list, exact totals",
+      "tags": [
+        "fix"
+      ],
+      "items": [
+        "Choose a version: no more flicker on the line you just left.",
+        "Collection and genre totals always include every TV service you added, so the card and the page show the same number."
+      ]
+    },
+    {
+      "v": "205",
+      "date": "Nov 24, 2026",
+      "title": "Every card shows the real total",
+      "tags": [
+        "fix"
+      ],
+      "items": [
+        "Every collection card, including the big seasonal one, now shows the same total as its page.",
+        "Collections are counted quietly in the background while the Premiere home is open.",
+        "Settings: the \"Updated\" date is always the real date the app was updated."
+      ]
+    },
+    {
+      "v": "204",
+      "date": "Nov 24, 2026",
+      "title": "Totals that always match",
+      "tags": [
+        "fix",
+        "fast"
+      ],
+      "items": [
+        "Premiere home: the top menu stays perfectly still when you come back from a section.",
+        "The total on each collection card now matches the total inside the page.",
+        "Category and Actors and Directors pages remember what they found even after the app is closed; new ones are added quietly."
+      ]
+    },
+    {
+      "v": "203",
+      "date": "Nov 24, 2026",
+      "title": "Categories remember their totals",
+      "tags": [
+        "fast"
+      ],
+      "items": [
+        "Genre and collection pages remember everything they found, so they open with the full total right away.",
+        "New movies and series are added quietly in the background; nothing is searched again from the start.",
+        "Premiere home: coming back from Live TV, Movies or Series, the top menu stays on the button you used, with no jump from Home."
+      ]
+    },
+    {
+      "v": "202",
+      "date": "Nov 24, 2026",
+      "title": "A cleaner top bar",
+      "tags": [
+        "look"
+      ],
+      "items": [
+        "Poster pages: the top bar now fades softly into the posters, like the side menu.",
+        "The page name always shows in full, and the highlighted movie stays in one place on the left with its year and IMDb score.",
+        "Premiere home: the highlight in the top menu now glides to the button you are on."
+      ]
+    },
+    {
       "v": "201",
       "date": "Nov 24, 2026",
       "title": "Back to the same poster",
@@ -1122,6 +1365,16 @@
     }
   ],
   "windows": [
+    {
+      "v": "1.7.15",
+      "date": "Nov 25, 2026",
+      "title": "A new app icon with more space around the IPTV emblem",
+      "tags": [],
+      "items": [
+        "A new app icon with more space around the IPTV emblem.",
+        "Technical Support: the website button no longer repeats the web address next to it."
+      ]
+    },
     {
       "v": "1.7.14",
       "date": "Nov 21, 2026",
