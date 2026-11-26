@@ -1450,6 +1450,24 @@
   ],
   "windows": [
     {
+      "v": "1.13.3",
+      "date": "Nov 25, 2026",
+      "title": "The \"A new version is available\" message has a modern ico…",
+      "tags": [],
+      "items": [
+        "The \"A new version is available\" message has a modern icon and modern button icons instead of the old arrow symbols."
+      ]
+    },
+    {
+      "v": "1.13.2",
+      "date": "Nov 25, 2026",
+      "title": "The Live TV button in the top bar opens the Live TV secti…",
+      "tags": [],
+      "items": [
+        "The Live TV button in the top bar opens the Live TV section again (it no longer jumps into the last channel you watched). Clicking a card in Recently watched channels still opens that channel."
+      ]
+    },
+    {
       "v": "1.13.1",
       "date": "Nov 25, 2026",
       "title": "In the shrunk top bar the time now sits exactly in the mi…",
