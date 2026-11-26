@@ -112,7 +112,9 @@ fetch("version.json",{cache:"no-store"}).then(function(r){return r.json()}).then
 <div class="note"><strong>Important:</strong> Cinema Premiere IPTV Player is an IPTV player only. It does not provide channels, movies, TV shows, free content, or IPTV subscriptions. You must have an active subscription from a compatible third-party IPTV provider to log in and access content.</div>
 <div class="support">Technical support: <a class="email" href="mailto:danramzi@yahoo.com">danramzi@yahoo.com</a>   •   <a class="email" href="https://www.facebook.com/profile.php?id=61596412777334" target="_blank" rel="noopener">Facebook page</a>   •   <a class="email" href="https://t.me/drsaog?text=Hello%2C%20I%20need%20technical%20support%20for%20Cinema%20Premiere%20IPTV%20Player." target="_blank" rel="noopener">Telegram</a></div><footer>© Cinema Premiere IPTV Player</footer></main>
 <script>
-/* download counter: all downloads of the app files on GitHub (every version), kept for 1 hour in this browser */
+/* download counter: all downloads of the app files on GitHub (every version). Every page load asks GitHub for the
+   newest numbers (owner: "when I refresh, show the new downloads"); the last numbers are shown at once while it asks,
+   and stay if GitHub does not answer (it allows 60 questions an hour per visitor). */
 (function () {
   function show(w, a) {
     var f = function (n) { return Number(n).toLocaleString('en-US'); };
@@ -121,8 +123,8 @@ fetch("version.json",{cache:"no-store"}).then(function(r){return r.json()}).then
     var x = document.querySelector('#dl-win b'); x.textContent = f(w); document.getElementById('dl-win').hidden = false;
     var y = document.querySelector('#dl-and b'); y.textContent = f(a); document.getElementById('dl-and').hidden = false;
   }
-  try { var c = JSON.parse(localStorage.getItem('dlCount') || 'null'); if (c && Date.now() - c.at < 3600000) { show(c.w, c.a); return; } } catch (e) {}
-  fetch('https://api.github.com/repos/danramzi-eagle5871/dans-iptv/releases?per_page=100').then(function (r) { return r.ok ? r.json() : []; }).then(function (rel) {
+  try { var c = JSON.parse(localStorage.getItem('dlCount') || 'null'); if (c) show(c.w, c.a); } catch (e) {}
+  fetch('https://api.github.com/repos/danramzi-eagle5871/dans-iptv/releases?per_page=100', { cache: 'no-store' }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (rel) {
     var w = 0, a = 0;
     (rel || []).forEach(function (x) { (x.assets || []).forEach(function (f) { if (/\.exe$/i.test(f.name)) w += f.download_count; else if (/\.apk$/i.test(f.name)) a += f.download_count; }); });
     try { localStorage.setItem('dlCount', JSON.stringify({ at: Date.now(), w: w, a: a })); } catch (e) {}
