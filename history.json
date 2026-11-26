@@ -1450,6 +1450,34 @@
   ],
   "windows": [
     {
+      "v": "1.14.0",
+      "date": "Nov 26, 2026",
+      "title": "New Welcome screen for a first start: pick your look - Cl…",
+      "tags": [],
+      "items": [
+        "New Welcome screen for a first start: pick your look - Classic (big tiles), Premiere (cinema style) or Gallery (photo wallpapers: Barcelona, Real Madrid, Eagle Lake).",
+        "You no longer have to enter an IPTV account to start. The app opens right away with a notice to add your Xtream or M3U details later in Settings > My TV services (or press 'I have an IPTV account' on the Welcome screen)."
+      ]
+    },
+    {
+      "v": "1.13.5",
+      "date": "Nov 26, 2026",
+      "title": "Settings > My Xtream accounts: a new Edit button lets you…",
+      "tags": [],
+      "items": [
+        "Settings > My Xtream accounts: a new Edit button lets you change an account's name, server, username and password. Hidden categories stay with the account."
+      ]
+    },
+    {
+      "v": "1.13.4",
+      "date": "Nov 26, 2026",
+      "title": "Updating from an older version now opens the new Cinema P…",
+      "tags": [],
+      "items": [
+        "Updating from an older version now opens the new Cinema Premiere theme automatically (once). You can pick another theme any time in Settings > Home screen > Theme."
+      ]
+    },
+    {
       "v": "1.13.3",
       "date": "Nov 25, 2026",
       "title": "The \"A new version is available\" message has a modern ico…",
