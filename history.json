@@ -1450,6 +1450,115 @@
   ],
   "windows": [
     {
+      "v": "1.19.2",
+      "date": "Nov 26, 2026",
+      "title": "Speed check of the new screens: the Welcome screen uses m…",
+      "tags": [],
+      "items": [
+        "Speed check of the new screens: the Welcome screen uses much less power, Slow-PC mode now also switches the page fade off, and at most 3 pages are kept for Back."
+      ]
+    },
+    {
+      "v": "1.19.1",
+      "date": "Nov 26, 2026",
+      "title": "New installs start with Today's games and Score cards swi…",
+      "tags": [],
+      "items": [
+        "New installs start with Today's games and Score cards switched off (you can turn them on in Settings > Home screen). People who already use the app keep their setting.",
+        "The \"not available on Premiere\" notes have a modern icon."
+      ]
+    },
+    {
+      "v": "1.19.0",
+      "date": "Nov 26, 2026",
+      "title": "Going back no longer flashes",
+      "tags": [],
+      "items": [
+        "Going back no longer flashes. When you open a movie, an actor or a list from a Premiere page and press Back, the page you left is put back exactly as it was: same scroll place, same selected card, nothing rebuilt. Pages now cross-fade smoothly when you move between them."
+      ]
+    },
+    {
+      "v": "1.18.3",
+      "date": "Nov 26, 2026",
+      "title": "The Back button that appears while you scroll down now si…",
+      "tags": [],
+      "items": [
+        "The Back button that appears while you scroll down now sits at the top left, level with the top bar."
+      ]
+    },
+    {
+      "v": "1.18.2",
+      "date": "Nov 26, 2026",
+      "title": "On the genre, actor and Actors and Directors pages the Ba…",
+      "tags": [],
+      "items": [
+        "On the genre, actor and Actors and Directors pages the Back button also appears at the top right while you scroll down. All Back buttons now have a modern arrow icon."
+      ]
+    },
+    {
+      "v": "1.18.1",
+      "date": "Nov 26, 2026",
+      "title": "The Device profile drop-down (Stalker / MAG) now shows ev…",
+      "tags": [],
+      "items": [
+        "The Device profile drop-down (Stalker / MAG) now shows every choice clearly (white names on a dark list)."
+      ]
+    },
+    {
+      "v": "1.18.0",
+      "date": "Nov 26, 2026",
+      "title": "Genre, collection, actor and Actors and Directors pages n…",
+      "tags": [],
+      "items": [
+        "Genre, collection, actor and Actors and Directors pages now have a Back button. Back (and Esc) returns to the page and the place you opened it from, for example the same row on the home page."
+      ]
+    },
+    {
+      "v": "1.17.1",
+      "date": "Nov 26, 2026",
+      "title": "Settings > My TV services: a new \"Stalker / MAG portal\" card",
+      "tags": [],
+      "items": [
+        "Settings > My TV services: a new \"Stalker / MAG portal\" card. Add a portal address + MAC address; it appears with your channel lists and in Live TV (Live TV only)."
+      ]
+    },
+    {
+      "v": "1.17.0",
+      "date": "Nov 26, 2026",
+      "title": "Settings > Help & about: a Legal Disclaimer card (the app…",
+      "tags": [],
+      "items": [
+        "Settings > Help & about: a Legal Disclaimer card (the app is only a player, you add your own sources, picture and TMDB credits)."
+      ]
+    },
+    {
+      "v": "1.16.0",
+      "date": "Nov 26, 2026",
+      "title": "Settings > My TV services: new box \"Add from your provide…",
+      "tags": [],
+      "items": [
+        "Settings > My TV services: new box \"Add from your provider\" (like the Android app). It shows this PC's MAC Address and Device Key and a QR code. Your provider (or you, from a phone) opens the website page, types them with an Xtream login or an M3U link, and it is added to the app. Nothing is replaced; if the app has no login yet, it signs in at once."
+      ]
+    },
+    {
+      "v": "1.15.0",
+      "date": "Nov 26, 2026",
+      "title": "New sign-in option: Stalker / MAG portal (portal address …",
+      "tags": [],
+      "items": [
+        "New sign-in option: Stalker / MAG portal (portal address + MAC address + device profile). Live TV works with it; Movies and Series from a portal come later."
+      ]
+    },
+    {
+      "v": "1.14.1",
+      "date": "Nov 26, 2026",
+      "title": "Settings > Home screen: Today's games and Score cards now…",
+      "tags": [],
+      "items": [
+        "Settings > Home screen: Today's games and Score cards now say they are not available on the Cinema Premiere theme (they work on the other themes)."
+      ]
+    },
+    {
       "v": "1.14.0",
       "date": "Nov 26, 2026",
       "title": "New Welcome screen for a first start: pick your look - Cl…",
