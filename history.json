@@ -1450,6 +1450,193 @@
   ],
   "windows": [
     {
+      "v": "1.13.1",
+      "date": "Nov 25, 2026",
+      "title": "In the shrunk top bar the time now sits exactly in the mi…",
+      "tags": [],
+      "items": [
+        "In the shrunk top bar the time now sits exactly in the middle, level with the weather and the menu."
+      ]
+    },
+    {
+      "v": "1.13.0",
+      "date": "Nov 25, 2026",
+      "title": "The app is now called Cinema Premiere IPTV (installer, St…",
+      "tags": [],
+      "items": [
+        "The app is now called Cinema Premiere IPTV (installer, Start menu, desktop shortcut, support messages). Your settings, logins and Continue watching are kept."
+      ]
+    },
+    {
+      "v": "1.12.3",
+      "date": "Nov 25, 2026",
+      "title": "The top bar now shrinks with a smooth cinematic glide (0.…",
+      "tags": [],
+      "items": [
+        "The top bar now shrinks with a smooth cinematic glide (0.7 s): Cinema Premiere and the weather + clock slide in beside the menu, the menu gets smaller and the date fades out. No more jitter, and no flicker around the scroll line.",
+        "Poster cards in long lists pop out properly again (the lift, the frame and the name below it are no longer cut off)."
+      ]
+    },
+    {
+      "v": "1.12.2",
+      "date": "Nov 25, 2026",
+      "title": "Premiere section pages: when you scroll into a page with …",
+      "tags": [],
+      "items": [
+        "Premiere section pages: when you scroll into a page with a title bar (a genre, a collection, a franchise, a person, Actors and Directors, a title page, Search) the top bar and the title bar now share ONE background (with the page colour glowing from the left); the top bar gets slim and tiny and Cinema Premiere and the weather + clock move in beside the menu, while the page title (like Action) is bigger and clear. The home page keeps its normal top bar.",
+        "The name under a poster steps down a little when you point at it, so it no longer touches the frame."
+      ]
+    },
+    {
+      "v": "1.12.1",
+      "date": "Nov 25, 2026",
+      "title": "Premiere: scrolling a page (a genre, a collection, a fran…",
+      "tags": [],
+      "items": [
+        "Premiere: scrolling a page (a genre, a collection, a franchise, a person, Actors and Directors, a title page, Search) shows a bar under the top bar with the page name, e.g. Action, so you always know where you are; on the right it shows the name and year of the poster under the pointer.",
+        "Actors and Directors lists everyone with titles in your library, sorted A-Z, with no See more button: more people slip into place while the page is open."
+      ]
+    },
+    {
+      "v": "1.12.0",
+      "date": "Nov 25, 2026",
+      "title": "Premiere home, more to discover: an Explore banner and Co…",
+      "tags": [],
+      "items": [
+        "Premiere home, more to discover: an Explore banner and Collections (Oscar / Emmy / Golden Globe winners, Hidden Gems, Cult Classics, Documentaries, Christmas in the season and more), Because you watched, Recommended for you, Tonight's Pick (five moods), Got 90 minutes?, Popular Actors and Directors (with a See more page), Franchises and Movie Universes, Epic Nights and Browse by Genre. Every card opens its own page with Movies and Series tabs that keep filling with the titles your service has. Only titles you can play are shown.",
+        "Faster and lighter: long lists only draw what is on screen, missing posters are looked up once and remembered, and a new Slow-PC mode (Settings > Playback: Automatic / On / Off) gives older PCs a lighter look."
+      ]
+    },
+    {
+      "v": "1.10.1",
+      "date": "Nov 25, 2026",
+      "title": "Premiere search also opens with Ctrl+F (the usual Windows…",
+      "tags": [],
+      "items": [
+        "Premiere search also opens with Ctrl+F (the usual Windows search key); Ctrl+K still works."
+      ]
+    },
+    {
+      "v": "1.10.0",
+      "date": "Nov 25, 2026",
+      "title": "Premiere SEARCH: press Ctrl+K (or the Search button of th…",
+      "tags": [],
+      "items": [
+        "Premiere SEARCH: press Ctrl+K (or the Search button of the top bar) on the Premiere home or a title page. Type and the movies and series of your service appear at once (best matches first; English and Arabic; the same title in a different year shows as its own title). Point at a poster to see its story, year, length, genres and score on a big backdrop. Your last searches and the first results show as buttons. Arrow keys, Enter to open, Esc to close; Back from a title returns to the search."
+      ]
+    },
+    {
+      "v": "1.9.6",
+      "date": "Nov 25, 2026",
+      "title": "Leaving a channel that was opened from the Premiere pages…",
+      "tags": [],
+      "items": [
+        "Leaving a channel that was opened from the Premiere pages (Esc / Back) now goes straight to the Premiere home; the Live TV list no longer flashes on the way.",
+        "Settings > Content & search > Movie & Series info: step 1 now has two buttons, \"Create a free account\" (TMDB sign-up page) and \"I have an account: open my API page\" (TMDB shows the API page of the account you are signed in to), with clearer words."
+      ]
+    },
+    {
+      "v": "1.9.5",
+      "date": "Nov 25, 2026",
+      "title": "Premiere: the Live TV button in the top bar (and the Rece…",
+      "tags": [],
+      "items": [
+        "Premiere: the Live TV button in the top bar (and the Recently watched channels cards) now opens your last channel straight in full screen. Back / Esc returns to the Premiere page you came from (the channel keeps playing in the small corner player)."
+      ]
+    },
+    {
+      "v": "1.9.4",
+      "date": "Nov 25, 2026",
+      "title": "Settings > Content & search: two new cards, \"Movie & Seri…",
+      "tags": [],
+      "items": [
+        "Settings > Content & search: two new cards, \"Movie & Series info\" (TMDB) and \"IMDb scores\" (OMDb). The app already works with a shared key; you can add a FREE key of your own (three simple steps, a button opens the sign-up page). The app tests the key before saving it, keeps it only on this PC, and you can remove it any time."
+      ]
+    },
+    {
+      "v": "1.9.3",
+      "date": "Nov 25, 2026",
+      "title": "Premiere title pages have a Home button in the top bar (a…",
+      "tags": [],
+      "items": [
+        "Premiere title pages have a Home button in the top bar (a quick way back to the Premiere home, next to Back).",
+        "The scroll bar grows thicker still when the mouse comes near it."
+      ]
+    },
+    {
+      "v": "1.9.2",
+      "date": "Nov 25, 2026",
+      "title": "Choose a version now shows every time you press Watch now…",
+      "tags": [],
+      "items": [
+        "Choose a version now shows every time you press Watch now (also when you continue a movie); after you pick a version, a window asks Resume from 10:25 or Start from the beginning when that version (or another version of the same title) has a stop point. The page itself just says Watch now.",
+        "Continue watching cards on the Premiere home open the Premiere title page (with those windows), and Back returns to the Premiere home at the same place (it used to open the Movies section).",
+        "Faster: the library is prepared in the background while the home is shown, the versions of a title are remembered, and the movie's details are fetched as soon as its page opens.",
+        "The mouse wheel over a row now always moves that row sideways, also at its ends (it no longer jumps on to the next row); move the pointer off the rows (titles, the big picture, blank space or the scroll bar) to scroll the page."
+      ]
+    },
+    {
+      "v": "1.9.1",
+      "date": "Nov 25, 2026",
+      "title": "Choose a version now always appears when your service has…",
+      "tags": [],
+      "items": [
+        "Choose a version now always appears when your service has more than one copy of a title (it was skipped when you pressed Watch now before the library had finished loading; the button now waits a moment for it).",
+        "Settings: the white highlight in the group list glides to the group under the mouse, like the top bar of the Premiere home, and rests on the open group.",
+        "Scroll bars are wider and, when the mouse comes near the right edge, grow thick and bright so they are easy to grab."
+      ]
+    },
+    {
+      "v": "1.9.0",
+      "date": "Nov 25, 2026",
+      "title": "Premiere: the new TITLE PAGE",
+      "tags": [],
+      "items": [
+        "Premiere: the new TITLE PAGE. Click a poster or More info on the Premiere home: full backdrop, title logo, age rating, IMDb score, tagline, story, awards (like Won 3 Oscars), director / creator, Watch now / Resume / Start over, Trailer, My List, season + episode cards for series, Cast & Crew and More like this (only titles in your library). When your service has several copies of a title, Choose a version lists them (4K, Full HD, HD, language, subtitles). Esc or Back returns to where you were.",
+        "The previous / next buttons on the featured titles are redrawn so the arrows sit exactly in the middle of the circles."
+      ]
+    },
+    {
+      "v": "1.8.2",
+      "date": "Nov 25, 2026",
+      "title": "Premiere home: ‹ and › buttons on the featured titles (ri…",
+      "tags": [],
+      "items": [
+        "Premiere home: ‹ and › buttons on the featured titles (right side) to flip to the previous / next title yourself (the automatic flip waits 5 seconds again after you use them).",
+        "The mouse wheel over a row now moves the row more than twice as far per click."
+      ]
+    },
+    {
+      "v": "1.8.1",
+      "date": "Nov 25, 2026",
+      "title": "Premiere home: cards now sit neatly inside their highligh…",
+      "tags": [],
+      "items": [
+        "Premiere home: cards now sit neatly inside their highlight frame (Continue watching, Recently watched channels, posters), the arrow at the end of a row stays visible over a highlighted poster, and the mouse wheel over a row moves that row sideways (at the end of the row it scrolls the page again)."
+      ]
+    },
+    {
+      "v": "1.8.0",
+      "date": "Nov 25, 2026",
+      "title": "New theme \"Premiere\" (Settings > Home screen > Theme, fir…",
+      "tags": [],
+      "items": [
+        "New theme \"Premiere\" (Settings > Home screen > Theme, first in the list): the Cinema Premiere home of the TV app. A top bar with a gliding menu and the weather + clock, a hero reel of 10 featured titles (title logo, IMDb score, age rating), Continue watching, Recently watched channels, Top 10 Movies and TV Shows with tall gold numbers, Hot & Trending and New Releases. Everything shown is in your own library. Use the mouse or the arrow keys; Esc goes back to the top."
+      ]
+    },
+    {
+      "v": "1.7.19",
+      "date": "Nov 25, 2026",
+      "title": "Settings looks like the TV app: a list of groups on the l…",
+      "tags": [],
+      "items": [
+        "Settings looks like the TV app: a list of groups on the left (My TV services, Home screen, Playback, Content & search, Internet, Help & about) and the cards of the chosen group on the right.",
+        "New: a 12 / 24-hour clock switch (Weather & clock), Show the TV guide On / Off (Playback), Clear watch history (Content & search), an Internet speed test with a speedometer, Reload channels (My TV services) and Check for updates (Help & about).",
+        "Score cards and Today's games are now two separate cards.",
+        "Score cards: the \"Back to Barça + Lakers\" button is gone."
+      ]
+    },
+    {
       "v": "1.7.15",
       "date": "Nov 25, 2026",
       "title": "A new app icon with more space around the IPTV emblem",
