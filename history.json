@@ -1450,6 +1450,24 @@
   ],
   "windows": [
     {
+      "v": "1.25.4",
+      "date": "Nov 26, 2026",
+      "title": "Fixed the Movies and Series pages: scrolling works again …",
+      "tags": [],
+      "items": [
+        "Fixed the Movies and Series pages: scrolling works again and the movie / series page shows its full background picture."
+      ]
+    },
+    {
+      "v": "1.25.3",
+      "date": "Nov 26, 2026",
+      "title": "Search (Premiere) looks through every saved account; the …",
+      "tags": [],
+      "items": [
+        "Search (Premiere) looks through every saved account; the Movies and Series pages still search only the account chosen in their drop-down."
+      ]
+    },
+    {
       "v": "1.25.2",
       "date": "Nov 26, 2026",
       "title": "A new account you save is read quietly in the background …",
