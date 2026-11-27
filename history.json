@@ -1450,6 +1450,24 @@
   ],
   "windows": [
     {
+      "v": "1.32.1",
+      "date": "Nov 26, 2026",
+      "title": "The Sports Hub starts with no followed team on a new inst…",
+      "tags": [],
+      "items": [
+        "The Sports Hub starts with no followed team on a new install (you pick your own); the Home card teams are not copied in for you."
+      ]
+    },
+    {
+      "v": "1.32.0",
+      "date": "Nov 26, 2026",
+      "title": "New Sports Hub (a Sports button on the Home screen and in…",
+      "tags": [],
+      "items": [
+        "New Sports Hub (a Sports button on the Home screen and in the menus): live scores, today's games, standings, teams and match pages with highlight videos for soccer, basketball, football, baseball, hockey, F1, tennis, UFC, golf and rugby. Follow your teams and leagues, and see the next big game in a spotlight with a countdown. Everything comes from free sports feeds and is loaded only while the Sports Hub is open."
+      ]
+    },
+    {
       "v": "1.31.4",
       "date": "Nov 26, 2026",
       "title": "Series that a provider lists season by season (for exampl…",
