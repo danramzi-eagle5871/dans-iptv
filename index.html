@@ -1,135 +1,564 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Cinema Premiere IPTV Player</title>
+<meta name="description" content="Cinema Premiere IPTV Player: a fast, beautiful IPTV player for Windows, Android TV, Amazon Fire TV and Android phones.">
+<meta name="theme-color" content="#070d18">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23081629'/%3E%3Cpath d='M24 20l22 12-22 12z' fill='%23e0b85a'/%3E%3C/svg%3E">
 <style>
-:root { --navy: #081629; --gold: #d8b45a; --muted: #b9c4d3; }
-* { box-sizing: border-box; }
-body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(145deg, rgb(6,16,30), rgb(18,41,67)); color: #fff; min-height: 100vh; }
-.wrap { max-width: 980px; margin: auto; padding: 36px 20px 60px; }
-.hero { text-align: center; padding: 42px 15px 32px; }
-.hero h1 { color: var(--gold); font-size: clamp(32px, 6vw, 52px); margin: 20px 0 10px; }
-.hero p { color: var(--muted); font-size: 18px; line-height: 1.6; max-width: 700px; margin: auto; }
-.posters { display: grid; gap: 18px; margin-top: 8px; }
-.posters img { width: 100%; height: auto; display: block; border-radius: 18px; border: 1px solid rgb(52,70,90); }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; margin-top: 24px; }
-.card { background: rgb(16,36,59); border: 1px solid rgb(52,70,90); border-radius: 18px; padding: 24px; }
-.card h2 { color: var(--gold); margin-top: 0; }
-.card p { color: var(--muted); line-height: 1.55; min-height: 58px; }
-.btn { display: inline-block; background: var(--gold); color: rgb(16,26,40); text-decoration: none; font-weight: bold; padding: 13px 18px; border-radius: 9px; margin-top: 8px; }
-.code { font-size: 27px; font-weight: bold; color: #fff; letter-spacing: 2px; }
-.updates { margin-top: 24px; padding: 20px 24px; border: 1px solid rgb(52,70,90); border-radius: 18px; background: rgb(16,36,59); }
-.updates h2 { color: var(--gold); margin: 0 0 8px; font-size: 20px; }
-.updates p { color: var(--muted); line-height: 1.55; margin: 4px 0; }
-.updates .date { color: #fff; font-weight: bold; }
-.note { margin-top: 28px; padding: 20px; border-left: 4px solid var(--gold); background: rgb(13,29,48); color: var(--muted); line-height: 1.6; border-radius: 8px; }
-.support { text-align: center; margin-top: 28px; color: var(--muted); }
-a.email { color: var(--gold); }
-footer { text-align: center; color: rgb(132,148,168); font-size: 13px; margin-top: 38px; }
-/* update history */
-.hist { margin-top: 24px; padding: 22px 24px 18px; border: 1px solid rgb(52,70,90); border-radius: 18px; background: rgb(16,36,59); }
-.hist-head { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-bottom: 8px; }
-.hist-head h2 { color: var(--gold); margin: 0; font-size: 20px; flex: 1 1 auto; }
-.tabs { display: inline-flex; background: rgb(10,25,42); border: 1px solid rgb(52,70,90); border-radius: 999px; padding: 3px; }
-.tabs button { font: inherit; font-weight: bold; font-size: 14px; color: var(--muted); background: none; border: 0; border-radius: 999px; padding: 7px 16px; cursor: pointer; }
-.tabs button.on { background: var(--gold); color: rgb(16,26,40); }
-.hsearch { width: 100%; margin: 14px 0 4px; padding: 10px 14px; border-radius: 10px; border: 1px solid rgb(52,70,90); background: rgb(10,25,42); color: #fff; font: inherit; font-size: 15px; }
-.hsearch:focus { outline: none; border-color: var(--gold); }
-.hmeta { color: rgb(132,148,168); font-size: 13px; margin: 6px 2px 10px; }
-.timeline { position: relative; padding-left: 26px; }
-.timeline::before { content: ''; position: absolute; left: 8px; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(var(--gold), rgba(216,180,90,0.08)); }
-.ver { position: relative; margin: 0 0 10px; border: 1px solid rgb(40,60,84); border-radius: 14px; background: rgb(12,29,48); transition: border-color .2s, background .2s; }
-.ver::before { content: ''; position: absolute; left: -23px; top: 19px; width: 10px; height: 10px; border-radius: 50%; background: rgb(12,29,48); border: 2px solid var(--gold); }
-.ver.first::before { background: var(--gold); box-shadow: 0 0 0 4px rgba(216,180,90,0.18); }
-.ver[open] { border-color: rgba(216,180,90,0.55); background: rgb(14,33,55); }
-.ver summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 12px 14px; }
-.ver summary::-webkit-details-marker { display: none; }
-.badge { flex: none; min-width: 64px; text-align: center; font-weight: bold; font-size: 14px; color: rgb(16,26,40); background: var(--gold); border-radius: 8px; padding: 4px 8px; }
-.ver.old .badge { background: transparent; color: var(--gold); border: 1px solid var(--gold); }
-.vtxt { flex: 1; min-width: 0; }
-.vtxt b { display: block; color: #fff; font-size: 16px; }
-.vtxt small { color: rgb(132,148,168); font-size: 13px; }
-.tag { display: inline-block; font-size: 11px; font-weight: bold; letter-spacing: .4px; border-radius: 999px; padding: 2px 8px; margin-left: 6px; vertical-align: 1px; }
-.tag.new { background: rgba(76,175,80,0.18); color: #8ee59a; }
-.tag.fix { background: rgba(79,195,247,0.16); color: #8fd8ff; }
-.tag.fast { background: rgba(255,183,77,0.16); color: #ffcf84; }
-.tag.look { background: rgba(186,104,200,0.18); color: #e2a8ee; }
-.chev { flex: none; color: var(--gold); transition: transform .2s; font-size: 14px; }
-.ver[open] .chev { transform: rotate(180deg); }
-.ver ul { margin: 0; padding: 0 18px 14px 96px; color: var(--muted); line-height: 1.55; }
-.ver li { margin: 3px 0; }
-.ver li::marker { color: var(--gold); }
-.more { display: block; margin: 6px auto 0; font: inherit; font-weight: bold; color: var(--gold); background: none; border: 1px solid var(--gold); border-radius: 9px; padding: 9px 18px; cursor: pointer; }
-.dl { display: inline-flex; align-items: center; gap: 10px; margin-top: 18px; padding: 10px 20px; border: 1px solid rgba(216,180,90,0.55); border-radius: 999px; background: rgba(216,180,90,0.10); color: #fff; font-weight: bold; font-size: 17px; }
-.dl svg { width: 22px; height: 22px; flex: none; }
-.dl b { color: var(--gold); font-size: 20px; }
-.dl-card { display: flex; align-items: center; gap: 7px; margin-top: 14px; color: var(--muted); font-size: 14px; }
-.dl-card svg { width: 17px; height: 17px; flex: none; }
-.dl-card b { color: #fff; }
-[hidden] { display: none !important; }
-mark { background: rgba(216,180,90,0.35); color: #fff; border-radius: 3px; }
-@media (max-width: 600px) { .ver ul { padding-left: 34px; } .badge { min-width: 52px; font-size: 13px; } .tag { display: none; } }
-</style></head><body><main class="wrap"><header class="hero"><h1>Cinema Premiere IPTV Player</h1><p>A simple IPTV player for your compatible devices. Choose your platform below to get the app.</p><div class="dl" id="dl-total" hidden><svg viewBox="0 0 24 24" fill="none" stroke="#d8b45a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg><span><b id="dl-n">0</b> downloads</span></div></header>
-<section class="posters"><img src="poster-english.jpg?v=cp3" alt="Cinema Premiere IPTV Player – Your Entertainment. Your Player. Available on Android TV, Amazon Fire TV and Android phones."></section>
-<section class="grid">
-<div class="card"><h2>Windows PC</h2><p>Download the Cinema Premiere IPTV Player installer for your Windows computer.</p><a class="btn" href="https://github.com/danramzi-eagle5871/dans-iptv/releases/latest/download/Cinema-Premiere-IPTV-Setup.exe" target="_blank" rel="noopener">Download for Windows</a><div class="dl-card" id="dl-win" hidden><svg viewBox="0 0 24 24" fill="none" stroke="#d8b45a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg><span><b>0</b> downloads</span></div></div>
-<div class="card"><h2>Android TV, Amazon Fire TV &amp; Android Mobile</h2><p>Install the app using the Downloader app on your device. The same code works for all Android devices.</p><div class="code">7954037</div><a class="btn" href="https://aftv.news/7954037" target="_blank" rel="noopener">Get the Android App</a> <a class="btn" style="background:transparent;color:var(--gold);border:1px solid var(--gold)" href="https://github.com/danramzi-eagle5871/dans-iptv/releases/latest/download/DansIPTV-Share.apk">Direct download (.apk)</a><div class="dl-card" id="dl-and" hidden><svg viewBox="0 0 24 24" fill="none" stroke="#d8b45a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg><span><b>0</b> downloads</span></div></div>
+:root{
+  --bg:#070d18; --bg2:#0b1424; --surface:rgba(255,255,255,.045); --surface-solid:#0e1a2e; --line:rgba(255,255,255,.09);
+  --text:#f2f5fa; --muted:#a3b0c4; --faint:#6f7e96;
+  --gold:#e0b85a; --gold-2:#f3d98d; --gold-ink:#1a1405; --blue:#5b8cff; --glow:rgba(91,140,255,.16); --glow2:rgba(224,184,90,.14);
+  --shadow:0 20px 60px -20px rgba(0,0,0,.6); --radius:20px;
+  --font:"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,"Noto Sans","Noto Sans Arabic",Tahoma,sans-serif;
+}
+:root{--grad:linear-gradient(120deg,#f3d98d,#e0b85a 45%,#ffd98a)}
+:root[data-theme="light"]{
+  --bg:#e3e0d5; --bg2:#d8d4c6; --surface:rgba(255,255,255,.5); --surface-solid:#efece3; --line:rgba(25,35,55,.18);
+  --text:#0d1626; --muted:#38455b; --faint:#56637a;
+  --gold:#7a5406; --gold-2:#946710; --gold-ink:#fffdf6; --blue:#2a4fc4; --glow:rgba(42,79,196,.10); --glow2:rgba(122,84,6,.11);
+  --shadow:0 18px 40px -22px rgba(30,35,55,.45);
+  --grad:linear-gradient(120deg,#6b4704,#8a6109 55%,#a07313);
+}
+:root[data-theme="light"] .btn-gold{box-shadow:0 8px 20px -10px rgba(90,60,5,.6)}
+:root[data-theme="light"] .tag.new{background:rgba(30,130,50,.15);color:#1a6b30}
+:root[data-theme="light"] .tag.fix{background:rgba(20,110,170,.14);color:#0f5a8a}
+:root[data-theme="light"] .tag.fast{background:rgba(170,100,10,.15);color:#8a5000}
+:root[data-theme="light"] .tag.look{background:rgba(130,50,150,.14);color:#6e2a85}
+:root[data-theme="light"] .logo,:root[data-theme="light"] .app-ic{background:linear-gradient(145deg,#12294a,#081629);color:#e0b85a}
+:root[data-theme="light"] .logo svg{fill:#e0b85a}
+:root[data-theme="light"] .sel option{color:#111}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(900px 500px at 12% -5%,var(--glow),transparent 60%),radial-gradient(800px 500px at 100% 20%,var(--glow2),transparent 60%),linear-gradient(180deg,var(--bg),var(--bg2))}
+a{color:inherit}
+img{max-width:100%}
+.container{width:min(1160px,100% - 40px);margin-inline:auto}
+section{padding-block:84px}
+h1,h2,h3{line-height:1.15;margin:0;letter-spacing:-.02em}
+[hidden]{display:none !important}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:8px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);background:color-mix(in srgb,var(--bg) 72%,transparent);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;gap:20px;height:68px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:700;font-size:17px;letter-spacing:-.01em;white-space:nowrap}
+.logo{width:36px;height:36px;border-radius:11px;background:linear-gradient(145deg,#12294a,#081629);border:1px solid rgba(224,184,90,.45);display:grid;place-items:center;flex:none}
+.logo svg{width:18px;height:18px;fill:var(--gold)}
+.links{display:flex;gap:4px;margin-inline-start:18px}
+.links a{text-decoration:none;color:var(--muted);font-size:14.5px;padding:8px 13px;border-radius:10px;transition:.2s}
+.links a:hover,.links a.on{color:var(--text);background:var(--surface)}
+.nav-end{margin-inline-start:auto;display:flex;align-items:center;gap:10px}
+.sel,.icon-btn{height:40px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--text);font:inherit;font-size:14px;cursor:pointer}
+.sel{padding-inline:12px;appearance:none;-webkit-appearance:none;text-align:center}
+.sel option{color:#111;background:#fff}
+.icon-btn{width:40px;display:grid;place-items:center}
+.icon-btn svg{width:19px;height:19px}
+.sel:hover,.icon-btn:hover{border-color:var(--gold)}
+.burger{display:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-weight:650;font-size:15px;padding:13px 22px;border-radius:13px;border:1px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s,border-color .2s;font-family:inherit;white-space:nowrap}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-gold{background:linear-gradient(135deg,var(--gold-2),var(--gold));color:var(--gold-ink);box-shadow:0 10px 28px -10px var(--gold)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 34px -10px var(--gold)}
+.btn-ghost{background:var(--surface);border-color:var(--line);color:var(--text)}
+.btn-ghost:hover{border-color:var(--gold);transform:translateY(-2px)}
+.btn-sm{padding:10px 16px;font-size:14px;border-radius:11px}
+
+/* hero */
+.hero{padding-block:72px 56px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:9px;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-size:13px;color:var(--muted);margin-bottom:22px}
+.badge i{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px var(--glow2)}
+.hero h1{font-size:clamp(38px,5.6vw,66px);font-weight:800}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:clamp(16px,1.6vw,19px);color:var(--muted);max-width:56ch;margin:22px 0 30px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.dl-pill{display:inline-flex;align-items:center;gap:13px;margin-top:30px;padding:12px 20px 12px 14px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
+.dl-pill .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--glow2);color:var(--gold)}
+.dl-pill .ic svg{width:22px;height:22px}
+.dl-pill small{display:block;color:var(--faint);font-size:12.5px;line-height:1.2}
+.dl-pill b{font-size:22px;color:var(--gold);line-height:1.2}
+
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:22px;box-shadow:var(--shadow);backdrop-filter:blur(10px)}
+.panel-h{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.panel-h h3{font-size:16px}
+.panel-h p{margin:0;font-size:13px;color:var(--faint)}
+.plat{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:16px;border:1px solid var(--line);background:var(--surface);margin-top:10px;transition:.25s}
+.plat:hover{border-color:var(--gold);transform:translateX(4px)}
+[dir=rtl] .plat:hover{transform:translateX(-4px)}
+.plat .pi{width:44px;height:44px;border-radius:13px;background:var(--glow);display:grid;place-items:center;color:var(--blue);flex:none}
+.plat .pi svg{width:22px;height:22px}
+.plat b{display:block;font-size:15.5px}
+.plat span{font-size:13px;color:var(--muted)}
+
+/* section heads */
+.sh{max-width:680px;margin-bottom:42px}
+.sh .eyebrow{color:var(--gold);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px;display:block}
+[dir=rtl] .sh .eyebrow{letter-spacing:0}
+.sh h2{font-size:clamp(28px,3.6vw,42px);font-weight:800}
+.sh p{color:var(--muted);margin:14px 0 0;font-size:17px}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.stat{padding:22px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--line)}
+.stat b{display:block;font-size:30px;color:var(--text);letter-spacing:-.02em}
+.stat span{color:var(--muted);font-size:14px}
+.stat small{display:block;margin-top:2px;color:var(--gold);font-weight:700;font-size:13px}
+.stat small:empty{display:none}
+.stat:first-child b{color:var(--gold)}
+
+/* download cards */
+.apps{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.app{padding:30px;border-radius:26px;background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column;gap:18px;position:relative;overflow:hidden;transition:border-color .25s,transform .25s}
+.app:hover{border-color:color-mix(in srgb,var(--gold) 55%,transparent);transform:translateY(-4px)}
+.app::after{content:"";position:absolute;inset-inline-end:-80px;top:-80px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,var(--glow2),transparent 70%);pointer-events:none}
+.app-top{display:flex;align-items:center;gap:15px}
+.app-ic{width:56px;height:56px;border-radius:16px;background:linear-gradient(145deg,#12294a,#081629);border:1px solid rgba(224,184,90,.4);display:grid;place-items:center;color:var(--gold);flex:none}
+.app-ic svg{width:28px;height:28px}
+.app h3{font-size:22px}
+.app-top small{color:var(--muted);font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:12.5px;padding:5px 12px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--surface)}
+.chip.v{border-color:color-mix(in srgb,var(--gold) 50%,transparent);color:var(--gold);font-weight:700}
+.app p{margin:0;color:var(--muted)}
+.app-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto}
+.dlc{display:flex;align-items:center;gap:8px;color:var(--faint);font-size:13.5px}
+.dlc svg{width:16px;height:16px;color:var(--gold)}
+.dlc b{color:var(--text)}
+.codebox{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 18px;border-radius:16px;border:1px dashed color-mix(in srgb,var(--gold) 55%,transparent);background:var(--glow2)}
+.codebox small{display:block;color:var(--muted);font-size:12.5px}
+.codebox b{font-size:30px;letter-spacing:.14em;color:var(--text);font-variant-numeric:tabular-nums}
+
+/* features */
+.feat{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.f{padding:26px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--line);transition:.25s}
+.f:hover{border-color:color-mix(in srgb,var(--gold) 50%,transparent);transform:translateY(-4px);background:color-mix(in srgb,var(--surface-solid) 70%,transparent)}
+.f .fi{width:46px;height:46px;border-radius:14px;background:var(--glow2);color:var(--gold);display:grid;place-items:center;margin-bottom:18px}
+.f .fi svg{width:23px;height:23px}
+.f h3{font-size:18px;margin-bottom:8px}
+.f p{margin:0;color:var(--muted);font-size:15px}
+
+/* showcase */
+.show{border-radius:30px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:var(--surface-solid)}
+.show img{display:block;width:100%;height:auto}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s}
+.step{padding:26px;border-radius:var(--radius);border:1px solid var(--line);background:var(--surface);position:relative}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--gold-2),var(--gold));color:var(--gold-ink);font-weight:800;margin-bottom:16px}
+.step h3{font-size:18px;margin-bottom:6px}
+.step p{margin:0;color:var(--muted);font-size:15px}
+
+/* updates */
+.latest{padding:26px 28px;border-radius:var(--radius);border:1px solid color-mix(in srgb,var(--gold) 45%,transparent);background:linear-gradient(135deg,var(--glow2),var(--surface));margin-bottom:22px}
+.latest h3{font-size:14px;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+[dir=rtl] .latest h3{letter-spacing:0}
+.latest p{margin:4px 0;color:var(--muted)}
+.latest .d{color:var(--text);font-weight:650}
+.hist{padding:24px 26px;border-radius:var(--radius);border:1px solid var(--line);background:var(--surface)}
+.hist-head{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:6px}
+.hist-head h3{flex:1 1 auto;font-size:20px}
+.tabs{display:inline-flex;background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:3px}
+.tabs button{font:inherit;font-weight:650;font-size:14px;color:var(--muted);background:none;border:0;border-radius:999px;padding:7px 18px;cursor:pointer}
+.tabs button.on{background:linear-gradient(135deg,var(--gold-2),var(--gold));color:var(--gold-ink)}
+.hmeta{color:var(--faint);font-size:13.5px;margin:6px 2px 14px}
+.timeline{position:relative;padding-inline-start:28px}
+.timeline::before{content:"";position:absolute;inset-inline-start:8px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--gold),transparent)}
+.ver{position:relative;margin:0 0 10px;border:1px solid var(--line);border-radius:14px;background:var(--surface);transition:.2s}
+.ver::before{content:"";position:absolute;inset-inline-start:-26px;top:20px;width:10px;height:10px;border-radius:50%;background:var(--bg);border:2px solid var(--gold)}
+.ver.first::before{background:var(--gold);box-shadow:0 0 0 4px var(--glow2)}
+.ver[open]{border-color:color-mix(in srgb,var(--gold) 50%,transparent)}
+.ver summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:13px 15px}
+.ver summary::-webkit-details-marker{display:none}
+.vb{flex:none;min-width:62px;text-align:center;font-weight:800;font-size:14px;color:var(--gold-ink);background:var(--gold);border-radius:9px;padding:4px 9px}
+.ver.old .vb{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.vt{flex:1;min-width:0}
+.vt b{display:block;font-size:15.5px}
+.vt small{color:var(--faint);font-size:13px}
+.tag{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.04em;border-radius:999px;padding:2px 8px;margin-inline-start:7px;vertical-align:1px}
+.tag.new{background:rgba(76,175,80,.17);color:#4fc566}.tag.fix{background:rgba(79,195,247,.16);color:#37a6dd}
+.tag.fast{background:rgba(255,183,77,.17);color:#d98e1a}.tag.look{background:rgba(186,104,200,.17);color:#b25fc5}
+.chev{flex:none;color:var(--gold);transition:transform .2s;font-size:12px}
+.ver[open] .chev{transform:rotate(180deg)}
+.ver ul{margin:0;padding-block:0 14px;padding-inline:98px 18px;color:var(--muted);font-size:15px}
+.ver li{margin:3px 0}.ver li::marker{color:var(--gold)}
+.more{display:block;margin:8px auto 0;font:inherit;font-weight:650;color:var(--gold);background:none;border:1px solid var(--gold);border-radius:12px;padding:10px 20px;cursor:pointer}
+.more:hover{background:var(--glow2)}
+mark{background:color-mix(in srgb,var(--gold) 35%,transparent);color:inherit;border-radius:3px}
+
+/* support */
+.note{padding:22px 26px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--line);border-inline-start:4px solid var(--gold);color:var(--muted)}
+.note strong{color:var(--text)}
+.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.cc{display:flex;align-items:center;gap:14px;padding:20px;border-radius:var(--radius);border:1px solid var(--line);background:var(--surface);text-decoration:none;transition:.25s}
+.cc:hover{border-color:var(--gold);transform:translateY(-3px)}
+.cc .ci{width:46px;height:46px;border-radius:14px;background:var(--glow2);color:var(--gold);display:grid;place-items:center;flex:none}
+.cc .ci svg{width:22px;height:22px}
+.cc b{display:block}.cc span{color:var(--muted);font-size:14px;word-break:break-word}
+footer{border-top:1px solid var(--line);padding-block:30px;color:var(--faint);font-size:14px}
+.foot{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv{opacity:1;transform:none;transition:none}*{animation:none !important}}
+
+/* responsive */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr}
+  .apps,.contact{grid-template-columns:1fr}
+  .feat,.steps{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  section{padding-block:64px}
+}
+@media (max-width:860px){
+  .burger{display:grid}
+  .links{display:none;position:absolute;inset-inline:0;top:68px;flex-direction:column;margin:0;padding:12px 20px 18px;background:var(--bg);border-bottom:1px solid var(--line)}
+  .links.open{display:flex}
+  .links a{padding:13px 14px;font-size:16px}
+  .nav-cta{display:none}
+}
+@media (max-width:600px){
+  .feat,.steps{grid-template-columns:1fr}
+  .container{width:min(1160px,100% - 32px)}
+  .hero{padding-block:44px 36px}
+  .app{padding:22px}
+  .codebox b{font-size:24px}
+  .ver ul{padding-inline:30px 14px}
+  .vb{min-width:52px;font-size:13px}
+  .tag{display:none}
+  .btn{width:100%}
+  .app-actions .btn{width:100%}
+  .brand span{font-size:15px}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-in">
+    <a class="brand" href="#top" aria-label="Cinema Premiere IPTV Player">
+      <span class="logo"><svg viewBox="0 0 24 24"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l11-6.5a1 1 0 0 0 0-1.72l-11-6.5A1 1 0 0 0 8 5.5z"/></svg></span>
+      <span>Cinema Premiere</span>
+    </a>
+    <nav class="links" id="links" aria-label="Main">
+      <a href="#top" data-i18n="nav_home">Home</a>
+      <a href="#download" data-i18n="nav_download">Download</a>
+      <a href="#features" data-i18n="nav_features">Features</a>
+      <a href="#updates" data-i18n="nav_updates">Updates</a>
+      <a href="#support" data-i18n="nav_support">Support</a>
+    </nav>
+    <div class="nav-end">
+      <select class="sel" id="lang" aria-label="Language">
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="ar">العربية</option>
+      </select>
+      <button class="icon-btn" id="theme" aria-label="Toggle theme" title="Theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <a class="btn btn-gold btn-sm nav-cta" href="#download" data-i18n="nav_cta">Get the app</a>
+      <button class="icon-btn burger" id="burger" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="rv">
+      <span class="badge"><i></i><span data-i18n="badge">IPTV Player · Windows · Android TV · Fire TV · Phones</span></span>
+      <h1><span data-i18n="h1a">Your entertainment.</span> <span class="grad" data-i18n="h1b">Your player.</span></h1>
+      <p class="lead" data-i18n="lead">A fast, beautiful IPTV player for your Windows PC, Android TV, Amazon Fire TV and Android phone. Log in with your own subscription and enjoy live TV, movies and series in a premium cinema-style experience.</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="#download">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+          <span data-i18n="cta_dl">Download the app</span>
+        </a>
+        <a class="btn btn-ghost" href="#features" data-i18n="cta_feat">See features</a>
+      </div>
+      <div class="dl-pill" id="dl-total" hidden>
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg></span>
+        <span><small data-i18n="dl_total">Total downloads</small><b id="dl-n">0</b></span>
+      </div>
+    </div>
+
+    <aside class="panel rv" aria-label="Platforms">
+      <div class="panel-h">
+        <span class="logo"><svg viewBox="0 0 24 24"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l11-6.5a1 1 0 0 0 0-1.72l-11-6.5A1 1 0 0 0 8 5.5z"/></svg></span>
+        <div><h3 data-i18n="panel_t">One player, every screen</h3><p data-i18n="panel_s">Built for each device, not stretched to fit</p></div>
+      </div>
+      <div class="plat"><span class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><div><b>Windows PC</b><span data-i18n="p_win">Native desktop app with keyboard and mouse</span></div></div>
+      <div class="plat"><span class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="13" rx="2"/><path d="M7 21h10M9 9l3 3 3-3"/></svg></span><div><b>Android TV &amp; Fire TV</b><span data-i18n="p_tv">Full remote-control design for the big screen</span></div></div>
+      <div class="plat"><span class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg></span><div><b>Android Phone</b><span data-i18n="p_ph">Portrait screens made for your hand</span></div></div>
+    </aside>
+  </div>
 </section>
-<section class="posters" style="margin-top:24px"><img src="poster-arabic.jpg?v=cp4" alt="سينما بريمير – ترفيهك. مشغّلك." lang="ar"></section>
-<section class="updates" id="updates"><h2>Latest update</h2><p><span class="date" id="upd-line">Loading…</span></p><p id="upd-notes"></p><p><span class="date" id="upd-win"></span></p><p>If the app tells you a new version is available, download it from the buttons above and install it over your current one.</p></section>
-<script>
-fetch("version.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){
-  var a=d.android||{};
-  document.getElementById("upd-line").textContent="Android version "+a.version+" • Updated "+(a.updated||d.updated||"");
-  document.getElementById("upd-notes").textContent=a.notes||"";
-  var w=d.windows;if(w&&w.version)document.getElementById("upd-win").textContent="Windows version "+w.version+" • Updated "+(w.updated||d.updated||"");
-}).catch(function(){document.getElementById("upd-line").textContent="Updated regularly. Check this page for the newest version.";});
-</script>
-<section class="hist" id="history">
-<div class="hist-head"><h2>📜 Update history</h2><div class="tabs" role="tablist"><button class="on" data-app="android" role="tab">Android</button><button data-app="windows" role="tab">Windows</button></div></div>
-<div class="hmeta" id="hmeta"></div>
-<div class="timeline" id="hlist"><p class="hmeta">Loading…</p></div>
+
+<section style="padding-block:0 30px">
+  <div class="container stats rv">
+    <div class="stat"><b id="s-dl">—</b><span data-i18n="st_dl">Total downloads</span><small data-i18n="st_both">Windows + Android</small></div>
+    <div class="stat"><b id="s-wdl">—</b><span data-i18n="st_wdl">Windows downloads</span><small id="s-win"></small></div>
+    <div class="stat"><b id="s-adl">—</b><span data-i18n="st_adl">Android downloads</span><small id="s-and"></small></div>
+    <div class="stat"><b>4</b><span data-i18n="st_dev">Device types supported</span></div>
+  </div>
 </section>
+
+<section id="download">
+  <div class="container">
+    <div class="sh rv"><span class="eyebrow" data-i18n="dl_eye">Download</span><h2 data-i18n="dl_h">Choose your platform</h2><p data-i18n="dl_p">Pick your device below. Installing is quick, and updates install over your current version.</p></div>
+    <div class="apps">
+      <article class="app rv">
+        <div class="app-top"><span class="app-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><div><h3>Windows PC</h3><small data-i18n="w_sub">Installer for Windows 10 and 11</small></div></div>
+        <div class="chips"><span class="chip v" id="c-win">Windows</span><span class="chip">x64</span><span class="chip" data-i18n="w_c1">Auto-updates</span></div>
+        <p data-i18n="w_p">Download the Cinema Premiere IPTV Player installer for your Windows computer.</p>
+        <div class="dlc" id="dl-win" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg><span><b>0</b> <span data-i18n="dl_word">downloads</span></span></div>
+        <div class="app-actions"><a class="btn btn-gold" href="https://github.com/danramzi-eagle5871/dans-iptv/releases/latest/download/Cinema-Premiere-IPTV-Setup.exe" target="_blank" rel="noopener" data-i18n="w_btn">Download for Windows</a></div>
+      </article>
+
+      <article class="app rv">
+        <div class="app-top"><span class="app-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="13" rx="2"/><path d="M7 21h10"/></svg></span><div><h3>Android TV, Fire TV &amp; Mobile</h3><small data-i18n="a_sub">One app for every Android device</small></div></div>
+        <div class="chips"><span class="chip v" id="c-and">Android</span><span class="chip">Android TV</span><span class="chip">Fire TV</span><span class="chip" data-i18n="a_c1">Phones</span></div>
+        <p data-i18n="a_p">Install the app using the Downloader app on your device. The same code works for all Android devices.</p>
+        <div class="codebox"><div><small data-i18n="code_l">Downloader code</small><b id="code">7954037</b></div><button class="btn btn-ghost btn-sm" id="copy" type="button" data-i18n="copy">Copy</button></div>
+        <div class="dlc" id="dl-and" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg><span><b>0</b> <span data-i18n="dl_word">downloads</span></span></div>
+        <div class="app-actions"><a class="btn btn-gold" href="https://aftv.news/7954037" target="_blank" rel="noopener" data-i18n="a_btn">Get the Android App</a><a class="btn btn-ghost" href="https://github.com/danramzi-eagle5871/dans-iptv/releases/latest/download/DansIPTV-Share.apk" data-i18n="a_apk">Direct download (.apk)</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="features" style="padding-top:20px">
+  <div class="container">
+    <div class="sh rv"><span class="eyebrow" data-i18n="f_eye">Features</span><h2 data-i18n="f_h">Everything you need to watch</h2><p data-i18n="f_p">A clean, premium interface with the tools that matter, tuned for speed on every device.</p></div>
+    <div class="feat">
+      <div class="f rv"><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M8 2l4 4 4-4"/></svg></span><h3 data-i18n="f1t">Live TV</h3><p data-i18n="f1p">Browse and watch your live channels quickly, with categories and favorites.</p></div>
+      <div class="f rv"><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 3v18M17 3v18M3 8h4M3 16h4M17 8h4M17 16h4"/></svg></span><h3 data-i18n="f2t">Movies &amp; Series</h3><p data-i18n="f2p">A cinema-style home with posters, genres, ratings and details for every title.</p></div>
+      <div class="f rv"><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><h3 data-i18n="f3t">Fast search</h3><p data-i18n="f3p">Find any channel, movie or show in seconds with instant search.</p></div>
+      <div class="f rv"><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></svg></span><h3 data-i18n="f4t">Continue watching</h3><p data-i18n="f4p">Pick up right where you left off, synced across your devices.</p></div>
+      <div class="f rv"><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M21.5 20a6.5 6.5 0 0 0-4-6"/></svg></span><h3 data-i18n="f5t">Multiple accounts</h3><p data-i18n="f5p">Use more than one subscription and browse them together.</p></div>
+      <div class="f rv"><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><h3 data-i18n="f6t">Built for speed</h3><p data-i18n="f6p">Smooth scrolling, quick start-up and fast posters, even on older devices.</p></div>
+      <div class="f rv"><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7l4 3-1.5 5h-5L8 10z"/><path d="M12 3v4M16 10l4-1M14.5 15l2.5 4M9.5 15L7 19M8 10L4 9"/></svg></span><h3 data-i18n="f7t">Sports Hub</h3><p data-i18n="f7p">Live scores, matches and teams in one place, with a For you page built around your favorite sports.</p></div>
+      <div class="f rv"><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></span><h3 data-i18n="f8t">Ratings &amp; details</h3><p data-i18n="f8p">Ratings, cast lists and plot details for movies and series, so you can pick with confidence.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-block:20px 64px">
+  <div class="container"><div class="show rv"><img id="poster" src="poster-english.jpg?v=cp3" alt="Cinema Premiere IPTV Player – Your Entertainment. Your Player. Available on Android TV, Amazon Fire TV and Android phones." width="2000" height="848"></div></div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="container">
+    <div class="sh rv"><span class="eyebrow" data-i18n="h_eye">How it works</span><h2 data-i18n="h_h">Up and running in three steps</h2></div>
+    <div class="steps">
+      <div class="step rv"><h3 data-i18n="s1t">Install the app</h3><p data-i18n="s1p">Download it for your device from the buttons above.</p></div>
+      <div class="step rv"><h3 data-i18n="s2t">Log in</h3><p data-i18n="s2p">Sign in with the subscription you have from your IPTV provider.</p></div>
+      <div class="step rv"><h3 data-i18n="s3t">Start watching</h3><p data-i18n="s3p">Live TV, movies and series are ready in one beautiful place.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="updates">
+  <div class="container">
+    <div class="sh rv"><span class="eyebrow" data-i18n="u_eye">Updates</span><h2 data-i18n="u_h">What's new</h2></div>
+    <div class="latest rv" id="updates-box"><h3 data-i18n="u_latest">Latest update</h3><p><span class="d" id="upd-line">Loading…</span></p><p id="upd-notes"></p><p><span class="d" id="upd-win"></span></p><p data-i18n="u_note">If the app tells you a new version is available, download it from the buttons above and install it over your current one.</p></div>
+    <div class="hist rv" id="history">
+      <div class="hist-head"><h3 data-i18n="hist_t">📜 Update history</h3><div class="tabs" role="tablist"><button class="on" data-app="android" role="tab">Android</button><button data-app="windows" role="tab">Windows</button></div></div>
+      <div class="hmeta" id="hmeta"></div>
+      <div class="timeline" id="hlist"><p class="hmeta">…</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="support" style="padding-top:20px">
+  <div class="container">
+    <div class="sh rv"><span class="eyebrow" data-i18n="sp_eye">Support</span><h2 data-i18n="sp_h">We're here to help</h2></div>
+    <div class="note rv"><strong data-i18n="imp">Important:</strong> <span data-i18n="imp_t">Cinema Premiere IPTV Player is an IPTV player only. It does not provide channels, movies, TV shows, free content, or IPTV subscriptions. You must have an active subscription from a compatible third-party IPTV provider to log in and access content.</span></div>
+    <div class="contact">
+      <a class="cc rv" href="mailto:danramzi@yahoo.com"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><div><b data-i18n="c_mail">Email</b><span>danramzi@yahoo.com</span></div></a>
+      <a class="cc rv" href="https://t.me/drsaog?text=Hello%2C%20I%20need%20technical%20support%20for%20Cinema%20Premiere%20IPTV%20Player." target="_blank" rel="noopener"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 4L3 11l6 2.5L11.5 20l3-4.5L19 19z"/></svg></span><div><b>Telegram</b><span data-i18n="c_tg">Chat with support</span></div></a>
+      <a class="cc rv" href="https://www.facebook.com/profile.php?id=61596412777334" target="_blank" rel="noopener"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg></span><div><b>Facebook</b><span data-i18n="c_fb">Our page</span></div></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="container foot"><span>© Cinema Premiere IPTV Player</span><span data-i18n="foot">Technical support: danramzi@yahoo.com</span></div></footer>
+
 <script>
 (function(){
-  var data=null, app="android", showAll=false, SHOW=1;
-  var NAMES={new:"NEW",fix:"FIXED",fast:"FASTER",look:"LOOK"};
-  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
-  function hi(s,q){s=esc(s);if(!q)return s;var i=s.toLowerCase().indexOf(esc(q).toLowerCase());return i<0?s:s.slice(0,i)+"<mark>"+s.slice(i,i+q.length)+"</mark>"+s.slice(i+q.length)}
-  function draw(){
-    var q="", list=(data&&data[app])||[], box=document.getElementById("hlist");
-    var hits=list.filter(function(e){if(!q)return true;var t=(e.v+" "+e.title+" "+e.items.join(" ")).toLowerCase();return t.indexOf(q.toLowerCase())>=0});
-    var shown=q||showAll?hits:hits.slice(0,SHOW);
-    document.getElementById("hmeta").textContent=q?(hits.length+" update"+(hits.length==1?"":"s")+" match \""+q+"\""):(showAll?list.length+" updates - newest first. Click one to see what changed.":"The newest update. Earlier updates are below.");
-    box.innerHTML=shown.map(function(e,i){
-      var old=e.date==="Earlier";
-      return '<details class="ver'+(i===0&&!q?" first":"")+(old?" old":"")+'"'+(i===0&&!q||q?" open":"")+'><summary><span class="badge">'+(app==="android"&&!/^\d+\./.test(e.v)?"v":"")+esc(e.v)+'</span><span class="vtxt"><b>'+hi(e.title,q)+(e.tags||[]).map(function(t){return'<span class="tag '+t+'">'+NAMES[t]+'</span>'}).join("")+'</b><small>'+(old?"Earlier versions":esc(e.date))+'</small></span><span class="chev">▼</span></summary><ul>'+e.items.map(function(it){return"<li>"+hi(it,q)+"</li>"}).join("")+'</ul></details>';
-    }).join("")||'<p class="hmeta">Nothing found. Try another word.</p>';
-    if(!q&&hits.length>SHOW){var b=document.createElement("button");b.className="more";b.textContent=showAll?"Show less ▴":"Show earlier updates ("+(hits.length-SHOW)+") ▾";b.onclick=function(){showAll=!showAll;draw();if(!showAll)document.getElementById("history").scrollIntoView({behavior:"smooth"})};box.appendChild(b)}
-  }
-  document.querySelectorAll(".tabs button").forEach(function(b){b.onclick=function(){app=b.dataset.app;showAll=false;document.querySelectorAll(".tabs button").forEach(function(x){x.classList.toggle("on",x===b)});draw()}});
-  fetch("history.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){data=d;draw()}).catch(function(){document.getElementById("hlist").innerHTML='<p class="hmeta">The update history could not be loaded right now.</p>'});
+var T={
+en:{nav_home:"Home",nav_download:"Download",nav_features:"Features",nav_updates:"Updates",nav_support:"Support",nav_cta:"Get the app",
+badge:"IPTV Player · Windows · Android TV · Fire TV · Phones",h1a:"Your entertainment.",h1b:"Your player.",
+lead:"A fast, beautiful IPTV player for your Windows PC, Android TV, Amazon Fire TV and Android phone. Log in with your own subscription and enjoy live TV, movies and series in a premium cinema-style experience.",
+cta_dl:"Download the app",cta_feat:"See features",dl_total:"Total downloads",
+panel_t:"One player, every screen",panel_s:"Built for each device, not stretched to fit",p_win:"Native desktop app with keyboard and mouse",p_tv:"Full remote-control design for the big screen",p_ph:"Portrait screens made for your hand",
+st_dl:"Total downloads",st_both:"Windows + Android",st_wdl:"Windows downloads",st_adl:"Android downloads",st_dev:"Device types supported",
+f7t:"Sports Hub",f7p:"Live scores, matches and teams in one place, with a For you page built around your favorite sports.",f8t:"Ratings & details",f8p:"Ratings, cast lists and plot details for movies and series, so you can pick with confidence.",
+dl_eye:"Download",dl_h:"Choose your platform",dl_p:"Pick your device below. Installing is quick, and updates install over your current version.",
+w_sub:"Installer for Windows 10 and 11",w_c1:"Auto-updates",w_p:"Download the Cinema Premiere IPTV Player installer for your Windows computer.",w_btn:"Download for Windows",dl_word:"downloads",
+a_sub:"One app for every Android device",a_c1:"Phones",a_p:"Install the app using the Downloader app on your device. The same code works for all Android devices.",code_l:"Downloader code",copy:"Copy",copied:"Copied!",a_btn:"Get the Android App",a_apk:"Direct download (.apk)",
+f_eye:"Features",f_h:"Everything you need to watch",f_p:"A clean, premium interface with the tools that matter, tuned for speed on every device.",
+f1t:"Live TV",f1p:"Browse and watch your live channels quickly, with categories and favorites.",f2t:"Movies & Series",f2p:"A cinema-style home with posters, genres, ratings and details for every title.",f3t:"Fast search",f3p:"Find any channel, movie or show in seconds with instant search.",f4t:"Continue watching",f4p:"Pick up right where you left off, synced across your devices.",f5t:"Multiple accounts",f5p:"Use more than one subscription and browse them together.",f6t:"Built for speed",f6p:"Smooth scrolling, quick start-up and fast posters, even on older devices.",
+h_eye:"How it works",h_h:"Up and running in three steps",s1t:"Install the app",s1p:"Download it for your device from the buttons above.",s2t:"Log in",s2p:"Sign in with the subscription you have from your IPTV provider.",s3t:"Start watching",s3p:"Live TV, movies and series are ready in one beautiful place.",
+u_eye:"Updates",u_h:"What's new",u_latest:"Latest update",u_note:"If the app tells you a new version is available, download it from the buttons above and install it over your current one.",
+hist_t:"📜 Update history",
+sp_eye:"Support",sp_h:"We're here to help",imp:"Important:",imp_t:"Cinema Premiere IPTV Player is an IPTV player only. It does not provide channels, movies, TV shows, free content, or IPTV subscriptions. You must have an active subscription from a compatible third-party IPTV provider to log in and access content.",
+c_mail:"Email",c_tg:"Chat with support",c_fb:"Our page",foot:"Technical support: danramzi@yahoo.com",
+loading:"Loading…",upd_android:"Android version",upd_windows:"Windows version",updated:"Updated",upd_fallback:"Updated regularly. Check this page for the newest version.",
+h_newest:"The newest update. Earlier updates are below.",h_all:"{n} updates - newest first. Click one to see what changed.",h_match:"{n} update(s) match",h_none:"Nothing found. Try another word.",h_fail:"The update history could not be loaded right now.",
+more:"Show earlier updates ({n}) ▾",less:"Show less ▴",earlier:"Earlier versions",
+t_new:"NEW",t_fix:"FIXED",t_fast:"FASTER",t_look:"LOOK",hist_note:"Update notes are in English."},
+es:{nav_home:"Inicio",nav_download:"Descargar",nav_features:"Funciones",nav_updates:"Novedades",nav_support:"Soporte",nav_cta:"Obtener la app",
+badge:"Reproductor IPTV · Windows · Android TV · Fire TV · Móviles",h1a:"Tu entretenimiento.",h1b:"Tu reproductor.",
+lead:"Un reproductor IPTV rápido y elegante para tu PC con Windows, Android TV, Amazon Fire TV y teléfono Android. Inicia sesión con tu propia suscripción y disfruta de TV en vivo, películas y series con una experiencia premium estilo cine.",
+cta_dl:"Descargar la app",cta_feat:"Ver funciones",dl_total:"Descargas totales",
+panel_t:"Un reproductor, todas las pantallas",panel_s:"Diseñado para cada dispositivo, no estirado",p_win:"App de escritorio nativa con teclado y ratón",p_tv:"Diseño completo para control remoto en pantalla grande",p_ph:"Pantallas verticales hechas para tu mano",
+st_dl:"Descargas totales",st_both:"Windows + Android",st_wdl:"Descargas de Windows",st_adl:"Descargas de Android",st_dev:"Tipos de dispositivo compatibles",
+f7t:"Sports Hub",f7p:"Resultados en vivo, partidos y equipos en un solo lugar, con una página Para ti basada en tus deportes favoritos.",f8t:"Valoraciones y detalles",f8p:"Valoraciones, repartos y detalles de la trama de películas y series, para elegir con confianza.",
+dl_eye:"Descargar",dl_h:"Elige tu plataforma",dl_p:"Elige tu dispositivo abajo. Instalar es rápido y las actualizaciones se instalan sobre tu versión actual.",
+w_sub:"Instalador para Windows 10 y 11",w_c1:"Actualización automática",w_p:"Descarga el instalador de Cinema Premiere IPTV Player para tu computadora con Windows.",w_btn:"Descargar para Windows",dl_word:"descargas",
+a_sub:"Una app para todos los dispositivos Android",a_c1:"Teléfonos",a_p:"Instala la app con la aplicación Downloader en tu dispositivo. El mismo código funciona en todos los dispositivos Android.",code_l:"Código de Downloader",copy:"Copiar",copied:"¡Copiado!",a_btn:"Obtener la app Android",a_apk:"Descarga directa (.apk)",
+f_eye:"Funciones",f_h:"Todo lo que necesitas para ver",f_p:"Una interfaz limpia y premium con las herramientas que importan, optimizada para la velocidad en cada dispositivo.",
+f1t:"TV en vivo",f1p:"Explora y mira tus canales en vivo rápidamente, con categorías y favoritos.",f2t:"Películas y series",f2p:"Un inicio estilo cine con pósters, géneros, valoraciones y detalles de cada título.",f3t:"Búsqueda rápida",f3p:"Encuentra cualquier canal, película o serie en segundos con la búsqueda instantánea.",f4t:"Continuar viendo",f4p:"Retoma justo donde lo dejaste, sincronizado entre tus dispositivos.",f5t:"Varias cuentas",f5p:"Usa más de una suscripción y explóralas juntas.",f6t:"Hecho para la velocidad",f6p:"Desplazamiento fluido, inicio rápido y pósters veloces, incluso en dispositivos antiguos.",
+h_eye:"Cómo funciona",h_h:"Listo en tres pasos",s1t:"Instala la app",s1p:"Descárgala para tu dispositivo con los botones de arriba.",s2t:"Inicia sesión",s2p:"Entra con la suscripción que tienes de tu proveedor IPTV.",s3t:"Empieza a ver",s3p:"TV en vivo, películas y series listas en un solo lugar.",
+u_eye:"Novedades",u_h:"Qué hay de nuevo",u_latest:"Última actualización",u_note:"Si la app te avisa de una nueva versión, descárgala con los botones de arriba e instálala sobre la actual.",
+hist_t:"📜 Historial de actualizaciones",
+sp_eye:"Soporte",sp_h:"Estamos aquí para ayudarte",imp:"Importante:",imp_t:"Cinema Premiere IPTV Player es solo un reproductor IPTV. No ofrece canales, películas, series, contenido gratuito ni suscripciones IPTV. Necesitas una suscripción activa de un proveedor IPTV de terceros compatible para iniciar sesión y acceder al contenido.",
+c_mail:"Correo",c_tg:"Habla con soporte",c_fb:"Nuestra página",foot:"Soporte técnico: danramzi@yahoo.com",
+loading:"Cargando…",upd_android:"Versión de Android",upd_windows:"Versión de Windows",updated:"Actualizado",upd_fallback:"Se actualiza con regularidad. Consulta esta página para la versión más reciente.",
+h_newest:"La actualización más reciente. Las anteriores están debajo.",h_all:"{n} actualizaciones, de la más nueva a la más antigua. Toca una para ver los cambios.",h_match:"{n} actualización(es) coinciden",h_none:"No se encontró nada. Prueba otra palabra.",h_fail:"No se pudo cargar el historial de actualizaciones ahora.",
+more:"Mostrar actualizaciones anteriores ({n}) ▾",less:"Mostrar menos ▴",earlier:"Versiones anteriores",
+t_new:"NUEVO",t_fix:"ARREGLO",t_fast:"MÁS RÁPIDO",t_look:"DISEÑO",hist_note:"Las notas de actualización están en inglés."},
+ar:{nav_home:"الرئيسية",nav_download:"تحميل",nav_features:"المزايا",nav_updates:"التحديثات",nav_support:"الدعم",nav_cta:"احصل على التطبيق",
+badge:"مشغّل IPTV · ويندوز · أندرويد TV · فاير TV · الهواتف",h1a:"ترفيهك.",h1b:"مشغّلك.",
+lead:"مشغّل IPTV سريع وأنيق لحاسوب ويندوز وأندرويد TV وأمازون فاير TV وهاتف أندرويد. سجّل الدخول باشتراكك الخاص واستمتع بالبث المباشر والأفلام والمسلسلات بتجربة سينمائية فاخرة.",
+cta_dl:"حمّل التطبيق",cta_feat:"استعرض المزايا",dl_total:"إجمالي التحميلات",
+panel_t:"مشغّل واحد لكل الشاشات",panel_s:"مصمّم لكل جهاز وليس مجرد تمديد للشاشة",p_win:"تطبيق مكتبي أصلي مع لوحة المفاتيح والفأرة",p_tv:"تصميم كامل للتحكم بالريموت على الشاشة الكبيرة",p_ph:"شاشات عمودية مصمّمة ليدك",
+st_dl:"إجمالي التحميلات",st_both:"ويندوز + أندرويد",st_wdl:"تحميلات ويندوز",st_adl:"تحميلات أندرويد",st_dev:"أنواع الأجهزة المدعومة",
+f7t:"المركز الرياضي (Sports Hub)",f7p:"نتائج مباشرة ومباريات وفرق في مكان واحد، مع صفحة «لك» مبنية على رياضاتك المفضلة.",f8t:"التقييمات والتفاصيل",f8p:"تقييمات وطاقم التمثيل وتفاصيل القصة للأفلام والمسلسلات لتختار بثقة.",
+dl_eye:"تحميل",dl_h:"اختر منصتك",dl_p:"اختر جهازك أدناه. التثبيت سريع، والتحديثات تُثبَّت فوق نسختك الحالية.",
+w_sub:"مثبّت لويندوز 10 و11",w_c1:"تحديث تلقائي",w_p:"حمّل مثبّت Cinema Premiere IPTV Player لحاسوب ويندوز.",w_btn:"تحميل لويندوز",dl_word:"تحميل",
+a_sub:"تطبيق واحد لكل أجهزة أندرويد",a_c1:"الهواتف",a_p:"ثبّت التطبيق عبر تطبيق Downloader على جهازك. الكود نفسه يعمل على جميع أجهزة أندرويد.",code_l:"كود Downloader",copy:"نسخ",copied:"تم النسخ!",a_btn:"احصل على تطبيق أندرويد",a_apk:"تحميل مباشر (.apk)",
+f_eye:"المزايا",f_h:"كل ما تحتاجه للمشاهدة",f_p:"واجهة نظيفة وفاخرة مع الأدوات المهمة، مضبوطة للسرعة على كل جهاز.",
+f1t:"البث المباشر",f1p:"تصفّح قنواتك المباشرة وشاهدها بسرعة مع التصنيفات والمفضلة.",f2t:"أفلام ومسلسلات",f2p:"واجهة بأسلوب السينما مع الملصقات والأنواع والتقييمات وتفاصيل كل عمل.",f3t:"بحث سريع",f3p:"اعثر على أي قناة أو فيلم أو مسلسل في ثوانٍ بالبحث الفوري.",f4t:"أكمل المشاهدة",f4p:"تابع من حيث توقفت، مع مزامنة بين أجهزتك.",f5t:"حسابات متعددة",f5p:"استخدم أكثر من اشتراك وتصفّحها معًا.",f6t:"مبني للسرعة",f6p:"تمرير سلس وبدء سريع وملصقات فورية حتى على الأجهزة القديمة.",
+h_eye:"كيف يعمل",h_h:"جاهز في ثلاث خطوات",s1t:"ثبّت التطبيق",s1p:"حمّله لجهازك من الأزرار أعلاه.",s2t:"سجّل الدخول",s2p:"ادخل باشتراكك من مزوّد IPTV الخاص بك.",s3t:"ابدأ المشاهدة",s3p:"البث المباشر والأفلام والمسلسلات جاهزة في مكان واحد جميل.",
+u_eye:"التحديثات",u_h:"ما الجديد",u_latest:"آخر تحديث",u_note:"إذا أخبرك التطبيق بوجود إصدار جديد، حمّله من الأزرار أعلاه وثبّته فوق النسخة الحالية.",
+hist_t:"📜 سجل التحديثات",
+sp_eye:"الدعم",sp_h:"نحن هنا لمساعدتك",imp:"مهم:",imp_t:"Cinema Premiere IPTV Player مجرد مشغّل IPTV. لا يوفّر قنوات أو أفلامًا أو مسلسلات أو محتوى مجانيًا أو اشتراكات IPTV. يجب أن يكون لديك اشتراك فعّال من مزوّد IPTV خارجي متوافق لتسجيل الدخول والوصول إلى المحتوى.",
+c_mail:"البريد الإلكتروني",c_tg:"تحدّث مع الدعم",c_fb:"صفحتنا",foot:"الدعم الفني: danramzi@yahoo.com",
+loading:"جارٍ التحميل…",upd_android:"إصدار أندرويد",upd_windows:"إصدار ويندوز",updated:"تم التحديث",upd_fallback:"يتم التحديث بانتظام. تابع هذه الصفحة لأحدث إصدار.",
+h_newest:"أحدث تحديث. التحديثات السابقة أدناه.",h_all:"{n} تحديثًا من الأحدث إلى الأقدم. اضغط على أي تحديث لرؤية التغييرات.",h_match:"{n} تحديث مطابق",h_none:"لم يتم العثور على شيء. جرّب كلمة أخرى.",h_fail:"تعذّر تحميل سجل التحديثات الآن.",
+more:"عرض التحديثات السابقة ({n}) ▾",less:"عرض أقل ▴",earlier:"إصدارات سابقة",
+t_new:"جديد",t_fix:"إصلاح",t_fast:"أسرع",t_look:"مظهر",hist_note:"ملاحظات التحديث متوفرة بالإنجليزية."}
+};
+var posters={en:"poster-english.jpg?v=cp3",es:"poster-spanish.jpg?v=cp5",ar:"poster-arabic.jpg?v=cp4"};
+var posterAlt={en:"Cinema Premiere IPTV Player – Your Entertainment. Your Player. Available on Android TV, Amazon Fire TV and Android phones.",es:"Cinema Premiere IPTV Player – Tu entretenimiento. Tu reproductor. Disponible en Android TV, Amazon Fire TV y teléfonos Android.",ar:"سينما بريمير – ترفيهك. مشغّلك."};
+var lang="en", vdata=null, hdata=null, app="android", showAll=false, SHOW=1;
+function tr(k,o){var s=(T[lang]&&T[lang][k])||T.en[k]||k;if(o)for(var x in o)s=s.replace("{"+x+"}",o[x]);return s}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function nf(n){return Number(n).toLocaleString(lang==="ar"?"ar-EG":lang==="es"?"es-ES":"en-US")}
+
+function applyLang(l){
+  lang=T[l]?l:"en";
+  try{localStorage.setItem("lang",lang)}catch(e){}
+  var d=document.documentElement;d.lang=lang;d.dir=lang==="ar"?"rtl":"ltr";
+  document.querySelectorAll("[data-i18n]").forEach(function(el){var k=el.getAttribute("data-i18n");el.textContent=tr(k)});
+  document.getElementById("lang").value=lang;
+  var p=document.getElementById("poster");p.src=posters[lang];p.alt=posterAlt[lang];p.lang=lang;
+  document.title=lang==="ar"?"مشغّل سينما بريمير IPTV":"Cinema Premiere IPTV Player";
+  renderVersion();drawHist();renderCounts();
+}
+
+/* version info */
+function renderVersion(){
+  if(!vdata){document.getElementById("upd-line").textContent=tr("loading");return}
+  var a=vdata.android||{},w=vdata.windows;
+  document.getElementById("upd-line").textContent=tr("upd_android")+" "+a.version+" • "+tr("updated")+" "+(a.updated||vdata.updated||"");
+  document.getElementById("upd-notes").textContent=a.notes||"";
+  document.getElementById("upd-win").textContent=(w&&w.version)?tr("upd_windows")+" "+w.version+" • "+tr("updated")+" "+(w.updated||vdata.updated||""):"";
+  document.getElementById("s-and").textContent=a.version?"v"+a.version:"—";
+  document.getElementById("s-win").textContent=(w&&w.version)?"v"+w.version:"—";
+  var cw=document.getElementById("c-win"),ca=document.getElementById("c-and");
+  if(w&&w.version)cw.textContent="v"+w.version;
+  if(a.version)ca.textContent="v"+a.version;
+}
+
+/* history */
+function hi(s,q){s=esc(s);if(!q)return s;var i=s.toLowerCase().indexOf(esc(q).toLowerCase());return i<0?s:s.slice(0,i)+"<mark>"+s.slice(i,i+q.length)+"</mark>"+s.slice(i+q.length)}
+function drawHist(){
+  var box=document.getElementById("hlist"),meta=document.getElementById("hmeta");
+  if(hdata==="fail"){box.innerHTML="";meta.textContent=tr("h_fail");return}
+  if(!hdata){meta.textContent="";box.innerHTML='<p class="hmeta">'+tr("loading")+'</p>';return}
+  var list=hdata[app]||[],shown=showAll?list:list.slice(0,SHOW);
+  meta.textContent=(showAll?tr("h_all",{n:list.length}):tr("h_newest"))+(lang!=="en"?" "+tr("hist_note"):"");
+  box.innerHTML=shown.map(function(e,i){
+    var old=e.date==="Earlier";
+    return '<details class="ver'+(i===0?" first":"")+(old?" old":"")+'"'+(i===0?" open":"")+'><summary><span class="vb">'+(app==="android"&&!/^\d+\./.test(e.v)?"v":"")+esc(e.v)+'</span><span class="vt"><b>'+esc(e.title)+(e.tags||[]).map(function(t){return'<span class="tag '+t+'">'+tr("t_"+t)+'</span>'}).join("")+'</b><small>'+(old?tr("earlier"):esc(e.date))+'</small></span><span class="chev">▼</span></summary><ul>'+e.items.map(function(it){return"<li>"+esc(it)+"</li>"}).join("")+'</ul></details>';
+  }).join("");
+  if(list.length>SHOW){var b=document.createElement("button");b.className="more";b.textContent=showAll?tr("less"):tr("more",{n:list.length-SHOW});b.onclick=function(){showAll=!showAll;drawHist();if(!showAll)document.getElementById("history").scrollIntoView({behavior:"smooth"})};box.appendChild(b)}
+}
+document.querySelectorAll(".tabs button").forEach(function(b){b.onclick=function(){app=b.dataset.app;showAll=false;document.querySelectorAll(".tabs button").forEach(function(x){x.classList.toggle("on",x===b)});drawHist()}});
+fetch("version.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){vdata=d;renderVersion()}).catch(function(){document.getElementById("upd-line").textContent=tr("upd_fallback")});
+fetch("history.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){hdata=d;drawHist()}).catch(function(){hdata="fail";drawHist()});
+
+/* download counter: same logic as before (every version on GitHub, cached numbers shown at once) */
+var counts=null;
+function renderCounts(){
+  if(!counts||counts.w+counts.a<=0)return;
+  document.getElementById("dl-n").textContent=nf(counts.w+counts.a);document.getElementById("dl-total").hidden=false;
+  document.getElementById("s-dl").textContent=nf(counts.w+counts.a);
+  document.getElementById("s-wdl").textContent=nf(counts.w);document.getElementById("s-adl").textContent=nf(counts.a);
+  var x=document.querySelector("#dl-win b");x.textContent=nf(counts.w);document.getElementById("dl-win").hidden=false;
+  var y=document.querySelector("#dl-and b");y.textContent=nf(counts.a);document.getElementById("dl-and").hidden=false;
+}
+try{var c=JSON.parse(localStorage.getItem("dlCount")||"null");if(c)counts={w:c.w,a:c.a}}catch(e){}
+fetch("https://api.github.com/repos/danramzi-eagle5871/dans-iptv/releases?per_page=100",{cache:"no-store"}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(rel){
+  var w=0,a=0;
+  (rel||[]).forEach(function(x){(x.assets||[]).forEach(function(f){if(/\.exe$/i.test(f.name))w+=f.download_count;else if(/\.apk$/i.test(f.name))a+=f.download_count})});
+  try{localStorage.setItem("dlCount",JSON.stringify({at:Date.now(),w:w,a:a}))}catch(e){}
+  counts={w:w,a:a};renderCounts();
+}).catch(function(){});
+
+/* language, theme, menu, copy */
+var saved=null;try{saved=localStorage.getItem("lang")}catch(e){}
+var nav=(navigator.language||"en").slice(0,2).toLowerCase();
+applyLang(saved||(T[nav]?nav:"en"));
+document.getElementById("lang").onchange=function(){applyLang(this.value)};
+
+var root=document.documentElement;
+try{var th=localStorage.getItem("theme");if(th)root.setAttribute("data-theme",th)}catch(e){}
+document.getElementById("theme").onclick=function(){
+  var next=root.getAttribute("data-theme")==="light"?"dark":"light";
+  root.setAttribute("data-theme",next);
+  try{localStorage.setItem("theme",next)}catch(e){}
+};
+var links=document.getElementById("links"),burger=document.getElementById("burger");
+burger.onclick=function(){var o=links.classList.toggle("open");burger.setAttribute("aria-expanded",o)};
+links.addEventListener("click",function(e){if(e.target.tagName==="A"){links.classList.remove("open");burger.setAttribute("aria-expanded","false")}});
+document.getElementById("copy").onclick=function(){
+  var b=this,t=document.getElementById("code").textContent;
+  function done(){var o=b.textContent;b.textContent=tr("copied");setTimeout(function(){b.textContent=tr("copy")},1600)}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done)}else{done()}
+};
+
+/* scroll reveal and active link */
+root.classList.add("js");
+if("IntersectionObserver" in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.08,rootMargin:"0px 0px -40px 0px"});
+  document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
+}else{document.querySelectorAll(".rv").forEach(function(el){el.classList.add("in")})}
+setTimeout(function(){document.querySelectorAll(".rv").forEach(function(el){var r=el.getBoundingClientRect();if(r.top<innerHeight)el.classList.add("in")})},60);
 })();
 </script>
-<div class="note"><strong>Important:</strong> Cinema Premiere IPTV Player is an IPTV player only. It does not provide channels, movies, TV shows, free content, or IPTV subscriptions. You must have an active subscription from a compatible third-party IPTV provider to log in and access content.</div>
-<div class="support">Technical support: <a class="email" href="mailto:danramzi@yahoo.com">danramzi@yahoo.com</a>   •   <a class="email" href="https://www.facebook.com/profile.php?id=61596412777334" target="_blank" rel="noopener">Facebook page</a>   •   <a class="email" href="https://t.me/drsaog?text=Hello%2C%20I%20need%20technical%20support%20for%20Cinema%20Premiere%20IPTV%20Player." target="_blank" rel="noopener">Telegram</a></div><footer>© Cinema Premiere IPTV Player</footer></main>
-<script>
-/* download counter: all downloads of the app files on GitHub (every version). Every page load asks GitHub for the
-   newest numbers (owner: "when I refresh, show the new downloads"); the last numbers are shown at once while it asks,
-   and stay if GitHub does not answer (it allows 60 questions an hour per visitor). */
-(function () {
-  function show(w, a) {
-    var f = function (n) { return Number(n).toLocaleString('en-US'); };
-    if (w + a <= 0) return;
-    document.getElementById('dl-n').textContent = f(w + a); document.getElementById('dl-total').hidden = false;
-    var x = document.querySelector('#dl-win b'); x.textContent = f(w); document.getElementById('dl-win').hidden = false;
-    var y = document.querySelector('#dl-and b'); y.textContent = f(a); document.getElementById('dl-and').hidden = false;
-  }
-  try { var c = JSON.parse(localStorage.getItem('dlCount') || 'null'); if (c) show(c.w, c.a); } catch (e) {}
-  fetch('https://api.github.com/repos/danramzi-eagle5871/dans-iptv/releases?per_page=100', { cache: 'no-store' }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (rel) {
-    var w = 0, a = 0;
-    (rel || []).forEach(function (x) { (x.assets || []).forEach(function (f) { if (/\.exe$/i.test(f.name)) w += f.download_count; else if (/\.apk$/i.test(f.name)) a += f.download_count; }); });
-    try { localStorage.setItem('dlCount', JSON.stringify({ at: Date.now(), w: w, a: a })); } catch (e) {}
-    show(w, a);
-  }).catch(function () {});
-})();
-</script>
-</body></html>
+</body>
+</html>
