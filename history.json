@@ -1450,6 +1450,78 @@
   ],
   "windows": [
     {
+      "v": "1.37.4",
+      "date": "Nov 27, 2026",
+      "title": "The e-mail code box shows six dots, one for each digit of…",
+      "tags": [],
+      "items": [
+        "The e-mail code box shows six dots, one for each digit of the code."
+      ]
+    },
+    {
+      "v": "1.37.3",
+      "date": "Nov 27, 2026",
+      "title": "PIN recovery e-mails are sent from the app's own address",
+      "tags": [],
+      "items": [
+        "PIN recovery e-mails are sent from the app's own address."
+      ]
+    },
+    {
+      "v": "1.37.2",
+      "date": "Nov 27, 2026",
+      "title": "PIN recovery by e-mail is switched on: Forgot your PIN? s…",
+      "tags": [],
+      "items": [
+        "PIN recovery by e-mail is switched on: Forgot your PIN? sends a 6-digit code to the recovery e-mail."
+      ]
+    },
+    {
+      "v": "1.37.1",
+      "date": "Nov 27, 2026",
+      "title": "PIN recovery sends one code per hour",
+      "tags": [],
+      "items": [
+        "PIN recovery sends one code per hour."
+      ]
+    },
+    {
+      "v": "1.37.0",
+      "date": "Nov 27, 2026",
+      "title": "PIN recovery by e-mail: when you set a PIN you can save a…",
+      "tags": [],
+      "items": [
+        "PIN recovery by e-mail: when you set a PIN you can save a recovery e-mail. If you forget the PIN, the app e-mails a 6-digit code and the right code lets you choose a new PIN. You can add or change the e-mail in Settings > Parental control."
+      ]
+    },
+    {
+      "v": "1.36.2",
+      "date": "Nov 27, 2026",
+      "title": "Settings asks for the PIN every time you open it",
+      "tags": [],
+      "items": [
+        "Settings asks for the PIN every time you open it. A forgotten PIN can no longer be reset with the IPTV password (e-mail recovery is being prepared)."
+      ]
+    },
+    {
+      "v": "1.36.1",
+      "date": "Nov 27, 2026",
+      "title": "Settings is easier to read on every theme: the cards, the…",
+      "tags": [],
+      "items": [
+        "Settings is easier to read on every theme: the cards, the group buttons and the heading now have a dark background, so wallpaper themes no longer clash with the text."
+      ]
+    },
+    {
+      "v": "1.36.0",
+      "date": "Nov 27, 2026",
+      "title": "New Parental Control in Settings: choose a PIN, protect a…",
+      "tags": [],
+      "items": [
+        "New Parental Control in Settings: choose a PIN, protect adult categories and your own words in Live TV, Movies and Series, set an age limit for movies and series, and lock Settings. Protected content stays hidden until you unlock it with the PIN (a gold lock button appears), and locks again by itself."
+      ]
+    },
+    {
       "v": "1.35.2",
       "date": "Nov 27, 2026",
       "title": "A cleaner, modern Download button with a line icon: it sh…",
