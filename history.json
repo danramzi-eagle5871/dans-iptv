@@ -1450,6 +1450,69 @@
   ],
   "windows": [
     {
+      "v": "1.35.2",
+      "date": "Nov 27, 2026",
+      "title": "A cleaner, modern Download button with a line icon: it sh…",
+      "tags": [],
+      "items": [
+        "A cleaner, modern Download button with a line icon: it shows a cross while downloading and a tick when the movie is saved."
+      ]
+    },
+    {
+      "v": "1.35.1",
+      "date": "Nov 27, 2026",
+      "title": "The download review window has a new look that matches th…",
+      "tags": [],
+      "items": [
+        "The download review window has a new look that matches the app, with a storage bar that shows how much room the movie takes. The Movies and Series pages now also have the Cast & Crew row: click a person to see everything they are in."
+      ]
+    },
+    {
+      "v": "1.35.0",
+      "date": "Nov 27, 2026",
+      "title": "Before a movie download starts, a review window shows the…",
+      "tags": [],
+      "items": [
+        "Before a movie download starts, a review window shows the exact size, where it will be saved and how much free space your PC has. Press Proceed to start or Cancel to stop."
+      ]
+    },
+    {
+      "v": "1.34.0",
+      "date": "Nov 27, 2026",
+      "title": "On a movie or series page, click any actor or the directo…",
+      "tags": [],
+      "items": [
+        "On a movie or series page, click any actor or the director in the Cast & Crew row to see every title they are in. Back returns to the same movie page."
+      ]
+    },
+    {
+      "v": "1.33.0",
+      "date": "Nov 27, 2026",
+      "title": "A Download button on every movie page (next to Trailer): …",
+      "tags": [],
+      "items": [
+        "A Download button on every movie page (next to Trailer): saves the movie on your PC in Downloads > Cinema Premiere IPTV. It shows the progress, a second click cancels, and when it is finished the button says Downloaded (click it to open the folder)."
+      ]
+    },
+    {
+      "v": "1.32.3",
+      "date": "Nov 27, 2026",
+      "title": "On an actor's page, the actor's picture appears next to t…",
+      "tags": [],
+      "items": [
+        "On an actor's page, the actor's picture appears next to the name in the title bar as you scroll down and fades away when you go back to the top."
+      ]
+    },
+    {
+      "v": "1.32.2",
+      "date": "Nov 27, 2026",
+      "title": "Settings: the key boxes (movie info and IMDb scores) show…",
+      "tags": [],
+      "items": [
+        "Settings: the key boxes (movie info and IMDb scores) show only one eye to reveal the key."
+      ]
+    },
+    {
       "v": "1.32.1",
       "date": "Nov 26, 2026",
       "title": "The Sports Hub starts with no followed team on a new inst…",
