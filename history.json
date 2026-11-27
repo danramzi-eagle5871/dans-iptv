@@ -1450,6 +1450,210 @@
   ],
   "windows": [
     {
+      "v": "1.25.2",
+      "date": "Nov 26, 2026",
+      "title": "A new account you save is read quietly in the background …",
+      "tags": [],
+      "items": [
+        "A new account you save is read quietly in the background right away, so it is ready before you open a movie page. A removed account leaves the lists at once."
+      ]
+    },
+    {
+      "v": "1.25.1",
+      "date": "Nov 26, 2026",
+      "title": "Movies and Series pages keep each provider's own content:…",
+      "tags": [],
+      "items": [
+        "Movies and Series pages keep each provider's own content: a drop-down next to the search box chooses which saved account you browse. Home, Search and the title pages still look through every account."
+      ]
+    },
+    {
+      "v": "1.25.0",
+      "date": "Nov 26, 2026",
+      "title": "Movies and Series sections can now include the titles of …",
+      "tags": [],
+      "items": [
+        "Movies and Series sections can now include the titles of every saved account (replaced in 1.25.1 by the account drop-down)."
+      ]
+    },
+    {
+      "v": "1.24.3",
+      "date": "Nov 26, 2026",
+      "title": "Genre, collection and Home row pages count the titles of …",
+      "tags": [],
+      "items": [
+        "Genre, collection and Home row pages count the titles of every saved account, in the background and without slowing the app. A title from another account plays without switching accounts."
+      ]
+    },
+    {
+      "v": "1.24.2",
+      "date": "Nov 26, 2026",
+      "title": "A Continue watching card opens the title page only; the C…",
+      "tags": [],
+      "items": [
+        "A Continue watching card opens the title page only; the Choose a version window appears when you press Watch now."
+      ]
+    },
+    {
+      "v": "1.24.1",
+      "date": "Nov 26, 2026",
+      "title": "Choose a version no longer gets skipped: an old saved lis…",
+      "tags": [],
+      "items": [
+        "Choose a version no longer gets skipped: an old saved list with one copy is never trusted while the library is still loading."
+      ]
+    },
+    {
+      "v": "1.24.0",
+      "date": "Nov 26, 2026",
+      "title": "Several Xtream accounts: Choose a version offers every co…",
+      "tags": [],
+      "items": [
+        "Several Xtream accounts: Choose a version offers every copy of a title on every saved account, with the account shown on each row, and plays a copy from its own account without switching."
+      ]
+    },
+    {
+      "v": "1.23.1",
+      "date": "Nov 26, 2026",
+      "title": "Show / hide password eye on every password box",
+      "tags": [],
+      "items": [
+        "Show / hide password eye on every password box. The play icon is centred in its circle. The small Live TV window can be dragged anywhere on the screen."
+      ]
+    },
+    {
+      "v": "1.23.0",
+      "date": "Nov 26, 2026",
+      "title": "Movies and series: a Subtitles and audio button (like on …",
+      "tags": [],
+      "items": [
+        "Movies and series: a Subtitles and audio button (like on the TV app) to pick the audio language and subtitles, also for titles marked MULTI."
+      ]
+    },
+    {
+      "v": "1.22.2",
+      "date": "Nov 26, 2026",
+      "title": "X close button on the version windows",
+      "tags": [],
+      "items": [
+        "X close button on the version windows. Arabic descriptions stay Arabic. Sharp, exact-resolution backgrounds. Saved lists can never stall the screen."
+      ]
+    },
+    {
+      "v": "1.22.1",
+      "date": "Nov 26, 2026",
+      "title": "The IMDb badge is taken from the exact title everywhere",
+      "tags": [],
+      "items": [
+        "The IMDb badge is taken from the exact title everywhere."
+      ]
+    },
+    {
+      "v": "1.22.0",
+      "date": "Nov 26, 2026",
+      "title": "Movies and Series pages open instantly with no Loading sc…",
+      "tags": [],
+      "items": [
+        "Movies and Series pages open instantly with no Loading screen; the movie database decides the exact title first, and Choose a version also works there."
+      ]
+    },
+    {
+      "v": "1.21.1",
+      "date": "Nov 26, 2026",
+      "title": "Exact backgrounds from the provider's movie number, detai…",
+      "tags": [],
+      "items": [
+        "Exact backgrounds from the provider's movie number, details prepared when the mouse rests on a poster, modern Back button on the Movies / Series pages."
+      ]
+    },
+    {
+      "v": "1.21.0",
+      "date": "Nov 26, 2026",
+      "title": "Faster posters (small saved thumbnails), pictures loaded …",
+      "tags": [],
+      "items": [
+        "Faster posters (small saved thumbnails), pictures loaded ahead, long genre pages built only near the screen, title pages prepared ahead, and pictures retried automatically."
+      ]
+    },
+    {
+      "v": "1.20.7",
+      "date": "Nov 26, 2026",
+      "title": "Movies and Series sections are counted once and saved on …",
+      "tags": [],
+      "items": [
+        "Movies and Series sections are counted once and saved on the PC; only new titles raise the numbers."
+      ]
+    },
+    {
+      "v": "1.20.6",
+      "date": "Nov 26, 2026",
+      "title": "Dark pause / play icon on the gold button and thinner 10 …",
+      "tags": [],
+      "items": [
+        "Dark pause / play icon on the gold button and thinner 10 second icons."
+      ]
+    },
+    {
+      "v": "1.20.5",
+      "date": "Nov 26, 2026",
+      "title": "Genre and collection pages are counted once, saved, and o…",
+      "tags": [],
+      "items": [
+        "Genre and collection pages are counted once, saved, and only topped up quietly."
+      ]
+    },
+    {
+      "v": "1.20.4",
+      "date": "Nov 26, 2026",
+      "title": "Fixed a short freeze when leaving a page",
+      "tags": [],
+      "items": [
+        "Fixed a short freeze when leaving a page."
+      ]
+    },
+    {
+      "v": "1.20.3",
+      "date": "Nov 26, 2026",
+      "title": "The mouse wheel over the small player window never change…",
+      "tags": [],
+      "items": [
+        "The mouse wheel over the small player window never changes the volume. Smoother Back while a movie plays in the small window."
+      ]
+    },
+    {
+      "v": "1.20.2",
+      "date": "Nov 26, 2026",
+      "title": "The mini window of the player is now the app's own small …",
+      "tags": [],
+      "items": [
+        "The mini window of the player is now the app's own small floating player (bottom right): drag it anywhere, double-click it or press its first button to go back to full screen, X closes the movie, the round button pauses. It keeps playing while you browse the app.",
+        "Brightness: scroll the mouse wheel on the left side of the player to change it, like the volume on the right."
+      ]
+    },
+    {
+      "v": "1.20.1",
+      "date": "Nov 26, 2026",
+      "title": "Mini PiP window: the player screen now goes away and you …",
+      "tags": [],
+      "items": [
+        "Mini PiP window: the player screen now goes away and you land on the Home page while the movie keeps playing in the small window, so you can browse anywhere. Double-click the small window (or close it / send it back) and the movie comes back in full screen.",
+        "Choose a version now shows which account the title comes from, with a small account icon, in the header and on every version.",
+        "Going Back to a Premiere page puts every row at the same sideways place, not at the far left.",
+        "Modern Back 10 / Forward 10 buttons in the player."
+      ]
+    },
+    {
+      "v": "1.20.0",
+      "date": "Nov 26, 2026",
+      "title": "New movie and series player controls",
+      "tags": [],
+      "items": [
+        "New movie and series player controls. The round gold Play / Pause button sits in the middle of the bottom bar (clicking the picture no longer pauses), with Back 10 and Forward 10 beside it.",
+        "New buttons on the right of the bar: Lock Screen, Mini PiP Window, Screen Size and Full screen. Each shows a small label when you point at it.",
+        "Volume slider on the right side of the screen and Brightness slider on the left side. Mouse wheel also changes the volume; keys: Up / Down volume, M mute, L lock, F full screen."
+      ]
+    },
+    {
       "v": "1.19.2",
       "date": "Nov 26, 2026",
       "title": "Speed check of the new screens: the Welcome screen uses m…",
