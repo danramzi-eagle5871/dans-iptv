@@ -1450,6 +1450,142 @@
   ],
   "windows": [
     {
+      "v": "1.31.4",
+      "date": "Nov 26, 2026",
+      "title": "Series that a provider lists season by season (for exampl…",
+      "tags": [],
+      "items": [
+        "Series that a provider lists season by season (for example \"Name 3\" or \"Name 1&2\") are matched to their one real series in the movie database, so every season card gets the right poster, story and background. The automatic poster check now also covers series whose name has no year."
+      ]
+    },
+    {
+      "v": "1.31.2",
+      "date": "Nov 26, 2026",
+      "title": "Genre pages group movies by their main genres (a film app…",
+      "tags": [],
+      "items": [
+        "Genre pages group movies by their main genres (a film appears in a genre only when that genre is one of its first two), so Comedy no longer holds horror, animation and thrillers. The series check is much faster: the page starts at once and the rest is added as it is checked."
+      ]
+    },
+    {
+      "v": "1.31.1",
+      "date": "Nov 26, 2026",
+      "title": "Genre pages use IMDb's own genre list as the tie-breaker:…",
+      "tags": [],
+      "items": [
+        "Genre pages use IMDb's own genre list as the tie-breaker: only for the few series that the other genre sources are unsure about, and only when you have your own OMDb key (Settings). Where the other sources are sure they decide, so nothing is slower or limited."
+      ]
+    },
+    {
+      "v": "1.30.0",
+      "date": "Nov 26, 2026",
+      "title": "Genre pages take a second look at every series: it is che…",
+      "tags": [],
+      "items": [
+        "Genre pages take a second look at every series: it is checked once against a free genre list (TVmaze) and the movie database's keywords, so shows like Black Mirror leave Horror and Better Call Saul leaves Romance. Every answer is kept on your PC, so each show is checked only once."
+      ]
+    },
+    {
+      "v": "1.29.0",
+      "date": "Nov 26, 2026",
+      "title": "Genre pages: the Series side of every genre is now built …",
+      "tags": [],
+      "items": [
+        "Genre pages: the Series side of every genre is now built from the movie database's genres AND keywords (Romance, Thriller, Horror, History, War, Music, Adventure, Fantasy and the rest), so a series lands in the group it really belongs to."
+      ]
+    },
+    {
+      "v": "1.28.3",
+      "date": "Nov 26, 2026",
+      "title": "The Romance genre page now lists real romance series (TV …",
+      "tags": [],
+      "items": [
+        "The Romance genre page now lists real romance series (TV has no Romance genre in the movie database, the page used Drama before)."
+      ]
+    },
+    {
+      "v": "1.28.2",
+      "date": "Nov 26, 2026",
+      "title": "The last circle of the Actors and Directors row is now a …",
+      "tags": [],
+      "items": [
+        "The last circle of the Actors and Directors row is now a modern gold arrow, centred. Settings says that added rows work only on the Cinema Premiere theme."
+      ]
+    },
+    {
+      "v": "1.28.0",
+      "date": "Nov 26, 2026",
+      "title": "Add your own rows to the Cinema Premiere Home page: Setti…",
+      "tags": [],
+      "items": [
+        "Add your own rows to the Cinema Premiere Home page: Settings > Home screen > Add a row to the Home page. Choose a Movies, Series or Live TV section (with its number of titles) and it becomes a row under Continue watching; choose it again to remove it."
+      ]
+    },
+    {
+      "v": "1.27.4",
+      "date": "Nov 26, 2026",
+      "title": "Automatic poster fix: while you browse Movies and Series,…",
+      "tags": [],
+      "items": [
+        "Automatic poster fix: while you browse Movies and Series, the app quietly checks each title that shows a year in its name against the movie database and replaces a wrong or different provider picture with the real poster. It runs only when nothing is moving or playing, and remembers every answer."
+      ]
+    },
+    {
+      "v": "1.27.3",
+      "date": "Nov 26, 2026",
+      "title": "Wrong posters fixed: when a provider's picture is of anot…",
+      "tags": [],
+      "items": [
+        "Wrong posters fixed: when a provider's picture is of another film, the real movie poster replaces it on the card as soon as you point at the title or open it, and is remembered. The year in names like \"Name - 2026 [HD]\" is now read, so Arabic films are no longer matched to an older film with the same name.",
+        "Live TV: the clock under the preview is now plain and small."
+      ]
+    },
+    {
+      "v": "1.27.1",
+      "date": "Nov 26, 2026",
+      "title": "A plain small clock icon on Recently watched",
+      "tags": [],
+      "items": [
+        "A plain small clock icon on Recently watched. Arabic series are matched to the movie database even when the provider spells the name differently, so more of them get their proper poster and background."
+      ]
+    },
+    {
+      "v": "1.27.0",
+      "date": "Nov 26, 2026",
+      "title": "TV guide for every channel: when your provider sends no g…",
+      "tags": [],
+      "items": [
+        "TV guide for every channel: when your provider sends no guide for a channel (or you use a playlist), the app now finds Now / Next / Later by channel name from free public TV guides (Arab countries, US, UK, Canada, Europe and more), like the Android TV app."
+      ]
+    },
+    {
+      "v": "1.26.0",
+      "date": "Nov 26, 2026",
+      "title": "Series and movies that are not originally English (for ex…",
+      "tags": [],
+      "items": [
+        "Series and movies that are not originally English (for example Turkish series) now get the poster, the title picture and the sharpest text-free background in their own language from the movie database."
+      ]
+    },
+    {
+      "v": "1.25.6",
+      "date": "Nov 26, 2026",
+      "title": "Choose a version can no longer open twice on top of each …",
+      "tags": [],
+      "items": [
+        "Choose a version can no longer open twice on top of each other: a second click is ignored while the versions are being looked up, and only one window can exist."
+      ]
+    },
+    {
+      "v": "1.25.5",
+      "date": "Nov 26, 2026",
+      "title": "The app logo now shows next to the name in Settings > Hel…",
+      "tags": [],
+      "items": [
+        "The app logo now shows next to the name in Settings > Help & about. The public download file is now named Cinema-Premiere-IPTV-Setup.exe."
+      ]
+    },
+    {
       "v": "1.25.4",
       "date": "Nov 26, 2026",
       "title": "Fixed the Movies and Series pages: scrolling works again …",
