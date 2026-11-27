@@ -33,9 +33,14 @@
 :root[data-theme="light"] .sel option{color:#111}
 @font-face{font-family:"Noto Kufi Arabic";font-weight:400;font-display:swap;src:url(fonts/NotoKufiArabic-400.ttf) format("truetype")}
 @font-face{font-family:"Noto Kufi Arabic";font-weight:700;font-display:swap;src:url(fonts/NotoKufiArabic-700.ttf) format("truetype")}
-:root[lang="ar"]{--font:"Noto Kufi Arabic","Segoe UI",Tahoma,system-ui,sans-serif}
+@font-face{font-family:"Naskh Digits";font-weight:400;font-display:swap;unicode-range:U+0660-0669,U+066B-066C,U+06F0-06F9;src:url(fonts/NaskhDigits-400.woff2) format("woff2")}
+@font-face{font-family:"Naskh Digits";font-weight:700;font-display:swap;unicode-range:U+0660-0669,U+066B-066C,U+06F0-06F9;src:url(fonts/NaskhDigits-700.woff2) format("woff2")}
+:root[lang="ar"]{--font:"Naskh Digits","Noto Kufi Arabic","Segoe UI",Tahoma,system-ui,sans-serif}
 :root[lang="ar"] h1,:root[lang="ar"] h2,:root[lang="ar"] h3,:root[lang="ar"] .stat b{letter-spacing:0}
 :root[lang="ar"] body{line-height:1.8}
+:root[lang="ar"] .stat b{font-size:36px}
+:root[lang="ar"] .dl-pill b{font-size:25px}
+:root[lang="ar"] .codebox b{font-size:30px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:84px}
 body{margin:0;font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -313,7 +318,7 @@ footer{border-top:1px solid var(--line);padding-block:30px;color:var(--faint);fo
     <div class="stat"><b id="s-dl">—</b><span data-i18n="st_dl">Total downloads</span><small data-i18n="st_both">Windows + Android</small></div>
     <div class="stat"><b id="s-wdl">—</b><span data-i18n="st_wdl">Windows downloads</span><small id="s-win"></small></div>
     <div class="stat"><b id="s-adl">—</b><span data-i18n="st_adl">Android downloads</span><small id="s-and"></small></div>
-    <div class="stat"><b>4</b><span data-i18n="st_dev">Device types supported</span></div>
+    <div class="stat"><b id="s-dev">4</b><span data-i18n="st_dev">Device types supported</span></div>
   </div>
 </section>
 
@@ -470,7 +475,10 @@ t_new:"جديد",t_fix:"إصلاح",t_fast:"أسرع",t_look:"مظهر",hist_not
 var posters={en:"poster-english.jpg?v=cp3",es:"poster-spanish.jpg?v=cp5",ar:"poster-arabic.jpg?v=cp4"};
 var posterAlt={en:"Cinema Premiere IPTV Player – Your Entertainment. Your Player. Available on Android TV, Amazon Fire TV and Android phones.",es:"Cinema Premiere IPTV Player – Tu entretenimiento. Tu reproductor. Disponible en Android TV, Amazon Fire TV y teléfonos Android.",ar:"سينما بريمير – ترفيهك. مشغّلك."};
 var lang="en", vdata=null, hdata=null, app="android", showAll=false, SHOW=1;
-function tr(k,o){var s=(T[lang]&&T[lang][k])||T.en[k]||k;if(o)for(var x in o)s=s.replace("{"+x+"}",o[x]);return s}
+function ad(s){return lang==="ar"?String(s).replace(/\d/g,function(d){return"٠١٢٣٤٥٦٧٨٩"[d]}):String(s)}
+function tr(k,o){var s=(T[lang]&&T[lang][k])||T.en[k]||k;if(o)for(var x in o)s=s.replace("{"+x+"}",o[x]);return ad(s)}
+function ver(v){return lang==="ar"?"إصدار "+ad(v):"v"+v}
+function fd(t){if(!t||t==="Earlier"||lang==="en")return t;var d=new Date(t);if(isNaN(d))return t;try{return d.toLocaleDateString(lang==="ar"?"ar-EG":"es-ES",{year:"numeric",month:"long",day:"numeric"})}catch(e){return t}}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 function nf(n){return Number(n).toLocaleString(lang==="ar"?"ar-EG":lang==="es"?"es-ES":"en-US")}
 
@@ -482,6 +490,7 @@ function applyLang(l){
   document.getElementById("lang").value=lang;
   var p=document.getElementById("poster");p.src=posters[lang];p.alt=posterAlt[lang];p.lang=lang;
   document.title=lang==="ar"?"مشغّل سينما بريمير IPTV":"Cinema Premiere IPTV Player";
+  document.getElementById("s-dev").textContent=nf(4);
   renderVersion();drawHist();renderCounts();
 }
 
@@ -489,14 +498,14 @@ function applyLang(l){
 function renderVersion(){
   if(!vdata){document.getElementById("upd-line").textContent=tr("loading");return}
   var a=vdata.android||{},w=vdata.windows;
-  document.getElementById("upd-line").textContent=tr("upd_android")+" "+a.version+" • "+tr("updated")+" "+(a.updated||vdata.updated||"");
+  document.getElementById("upd-line").textContent=tr("upd_android")+" "+ad(a.version)+" • "+tr("updated")+" "+fd(a.updated||vdata.updated||"");
   document.getElementById("upd-notes").textContent=a.notes||"";
-  document.getElementById("upd-win").textContent=(w&&w.version)?tr("upd_windows")+" "+w.version+" • "+tr("updated")+" "+(w.updated||vdata.updated||""):"";
-  document.getElementById("s-and").textContent=a.version?"v"+a.version:"—";
-  document.getElementById("s-win").textContent=(w&&w.version)?"v"+w.version:"—";
+  document.getElementById("upd-win").textContent=(w&&w.version)?tr("upd_windows")+" "+ad(w.version)+" • "+tr("updated")+" "+fd(w.updated||vdata.updated||""):"";
+  document.getElementById("s-and").textContent=a.version?ver(a.version):"—";
+  document.getElementById("s-win").textContent=(w&&w.version)?ver(w.version):"—";
   var cw=document.getElementById("c-win"),ca=document.getElementById("c-and");
-  if(w&&w.version)cw.textContent="v"+w.version;
-  if(a.version)ca.textContent="v"+a.version;
+  if(w&&w.version)cw.textContent=ver(w.version);
+  if(a.version)ca.textContent=ver(a.version);
 }
 
 /* history */
@@ -509,7 +518,7 @@ function drawHist(){
   meta.textContent=(showAll?tr("h_all",{n:list.length}):tr("h_newest"))+(lang!=="en"?" "+tr("hist_note"):"");
   box.innerHTML=shown.map(function(e,i){
     var old=e.date==="Earlier";
-    return '<details class="ver'+(i===0?" first":"")+(old?" old":"")+'"'+(i===0?" open":"")+'><summary><span class="vb">'+(app==="android"&&!/^\d+\./.test(e.v)?"v":"")+esc(e.v)+'</span><span class="vt"><b>'+esc(e.title)+(e.tags||[]).map(function(t){return'<span class="tag '+t+'">'+tr("t_"+t)+'</span>'}).join("")+'</b><small>'+(old?tr("earlier"):esc(e.date))+'</small></span><span class="chev">▼</span></summary><ul>'+e.items.map(function(it){return"<li>"+esc(it)+"</li>"}).join("")+'</ul></details>';
+    return '<details class="ver'+(i===0?" first":"")+(old?" old":"")+'"'+(i===0?" open":"")+'><summary><span class="vb">'+(app==="android"&&!/^\d+\./.test(e.v)&&lang!=="ar"?"v":"")+esc(ad(e.v))+'</span><span class="vt"><b>'+esc(e.title)+(e.tags||[]).map(function(t){return'<span class="tag '+t+'">'+tr("t_"+t)+'</span>'}).join("")+'</b><small>'+(old?tr("earlier"):esc(fd(e.date)))+'</small></span><span class="chev">▼</span></summary><ul>'+e.items.map(function(it){return"<li>"+esc(it)+"</li>"}).join("")+'</ul></details>';
   }).join("");
   if(list.length>SHOW){var b=document.createElement("button");b.className="more";b.textContent=showAll?tr("less"):tr("more",{n:list.length-SHOW});b.onclick=function(){showAll=!showAll;drawHist();if(!showAll)document.getElementById("history").scrollIntoView({behavior:"smooth"})};box.appendChild(b)}
 }
