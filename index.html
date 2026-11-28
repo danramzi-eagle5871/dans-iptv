@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -545,13 +545,11 @@ fetch("https://api.github.com/repos/danramzi-eagle5871/dans-iptv/releases?per_pa
 }).catch(function(){});
 
 /* language, theme, menu, copy */
-var saved=null;try{saved=localStorage.getItem("lang")}catch(e){}
-var nav=(navigator.language||"en").slice(0,2).toLowerCase();
-applyLang(saved||(T[nav]?nav:"en"));
+applyLang("en");
 document.getElementById("lang").onchange=function(){applyLang(this.value)};
 
 var root=document.documentElement;
-try{var th=localStorage.getItem("theme");if(th)root.setAttribute("data-theme",th)}catch(e){}
+root.setAttribute("data-theme","light");
 document.getElementById("theme").onclick=function(){
   var next=root.getAttribute("data-theme")==="light"?"dark":"light";
   root.setAttribute("data-theme",next);
