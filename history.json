@@ -1450,6 +1450,199 @@
   ],
   "windows": [
     {
+      "v": "1.45.1",
+      "date": "Nov 27, 2026",
+      "title": "Arabic: Cairo is now the standard Arabic font (you can st…",
+      "tags": [],
+      "items": [
+        "Arabic: Cairo is now the standard Arabic font (you can still switch to the usual Windows font in Settings > Home screen > Language)."
+      ]
+    },
+    {
+      "v": "1.45.0",
+      "date": "Nov 27, 2026",
+      "title": "Search for actors and directors: the Search page shows an…",
+      "tags": [],
+      "items": [
+        "Search for actors and directors: the Search page shows an Actors and Directors row above the posters when you type a name, and the Actors and Directors page has its own search box. Only people who have a title in your library are shown.",
+        "Arabic: an actor's name keeps its dot / Jr. at the end (it was moved to the front)."
+      ]
+    },
+    {
+      "v": "1.44.1",
+      "date": "Nov 27, 2026",
+      "title": "Search (Premiere) and My List: posters that were missing …",
+      "tags": [],
+      "items": [
+        "Search (Premiere) and My List: posters that were missing in search but fine in the Movies section now show the same checked poster, and are looked up again if the service's picture fails.",
+        "The Arabic font choice is the usual font or Cairo (Readex Pro was taken out)."
+      ]
+    },
+    {
+      "v": "1.44.0",
+      "date": "Nov 27, 2026",
+      "title": "New \"Text size\" choice in Settings > Home screen > Langua…",
+      "tags": [],
+      "items": [
+        "New \"Text size\" choice in Settings > Home screen > Language (Normal, 95%, 90%, 85%, 80%): makes all the letters in the app a little smaller, in every language; changes at once.",
+        "The Edit button of your accounts has a modern pencil icon."
+      ]
+    },
+    {
+      "v": "1.43.1",
+      "date": "Nov 27, 2026",
+      "title": "Arabic: the mood tiles on the Premiere Home (Tonight's Pi…",
+      "tags": [],
+      "items": [
+        "Arabic: the mood tiles on the Premiere Home (Tonight's Pick) no longer cut the bottom of the letters in the title."
+      ]
+    },
+    {
+      "v": "1.43.0",
+      "date": "Nov 27, 2026",
+      "title": "Arabic: a new \"Arabic font\" choice in Settings > Home scr…",
+      "tags": [],
+      "items": [
+        "Arabic: a new \"Arabic font\" choice in Settings > Home screen > Language (visible when the language is Arabic): the usual Windows font or Cairo. The chosen font is used for all Arabic text in the app."
+      ]
+    },
+    {
+      "v": "1.42.0",
+      "date": "Nov 27, 2026",
+      "title": "Premiere Home: the five \"Tonight's Pick\" mood tiles fill …",
+      "tags": [],
+      "items": [
+        "Premiere Home: the five \"Tonight's Pick\" mood tiles fill the whole width of the window (no sideways scrolling), and long titles wrap instead of being cut."
+      ]
+    },
+    {
+      "v": "1.41.1",
+      "date": "Nov 27, 2026",
+      "title": "Download is for movies only (the episode download button …",
+      "tags": [],
+      "items": [
+        "Download is for movies only (the episode download button was taken out again)."
+      ]
+    },
+    {
+      "v": "1.41.0",
+      "date": "Nov 27, 2026",
+      "title": "Arabic: the full-screen Live TV clock uses Arabic digits,…",
+      "tags": [],
+      "items": [
+        "Arabic: the full-screen Live TV clock uses Arabic digits, and the Picture size button is translated.",
+        "Your provider's category names now always show exactly as the provider wrote them (the 1.40.0 word translation was removed).",
+        "When the app hides to the system tray during a download, a message tells you where it went and the tray icon shows the download percentage."
+      ]
+    },
+    {
+      "v": "1.40.0",
+      "date": "Nov 27, 2026",
+      "title": "Settings: the category names (My TV services, Home screen…",
+      "tags": [],
+      "items": [
+        "Settings: the category names (My TV services, Home screen, Playback ...) stay on one line in every language.",
+        "Download: a movie with several versions (4K, Full HD, HD ...) first asks which quality to download and shows each size.",
+        "New switch Settings > Playback > System: keep the app running in the system tray while a download runs; closing the window during a download asks (or follows the switch).",
+        "Theme names: Barca Colors (ألوان برشلونة) and the Barcelona photo theme."
+      ]
+    },
+    {
+      "v": "1.39.2",
+      "date": "Nov 27, 2026",
+      "title": "A star on each poster of the Premiere theme (home rows, T…",
+      "tags": [],
+      "items": [
+        "A star on each poster of the Premiere theme (home rows, Top 10, genre / collection lists, search, More like this): hollow on hover, gold once the title is in My List; one click adds or removes it."
+      ]
+    },
+    {
+      "v": "1.39.1",
+      "date": "Nov 27, 2026",
+      "title": "The More info button on the Premiere home uses a modern l…",
+      "tags": [],
+      "items": [
+        "The More info button on the Premiere home uses a modern line icon (all languages)."
+      ]
+    },
+    {
+      "v": "1.39.0",
+      "date": "Nov 27, 2026",
+      "title": "My List: a \"My List\" button in the Premiere top bar, a My…",
+      "tags": [],
+      "items": [
+        "My List: a \"My List\" button in the Premiere top bar, a My List item in the side menu and a My List row on the Home page (under Continue watching) all open your saved movies and series.",
+        "The My List page has All / Movies / Series tabs; a small gold star on each poster (or the Delete key) removes a title."
+      ]
+    },
+    {
+      "v": "1.38.5",
+      "date": "Nov 27, 2026",
+      "title": "Parental control: when protection is turned OFF the PIN i…",
+      "tags": [],
+      "items": [
+        "Parental control: when protection is turned OFF the PIN is never asked again (Settings and the Parental control group open freely, so you can switch it on again). The PIN and rules stay saved."
+      ]
+    },
+    {
+      "v": "1.38.4",
+      "date": "Nov 27, 2026",
+      "title": "Settings groups: the gold highlight stays on the open gro…",
+      "tags": [],
+      "items": [
+        "Settings groups: the gold highlight stays on the open group and no longer follows the mouse (no flicker); the mouse only brightens a group a little."
+      ]
+    },
+    {
+      "v": "1.38.3",
+      "date": "Nov 27, 2026",
+      "title": "Collection cards on the Premiere home: the posters have t…",
+      "tags": [],
+      "items": [
+        "Collection cards on the Premiere home: the posters have their own column, long titles can never touch them.",
+        "Search: posters are retried and start loading at once, so fewer cards stay text-only; the side-menu Search returns to the page you came from.",
+        "Arabic: Back from an actor / list returns to the same place in a row; clearer wording (جاري التحميل, إدارة اخفاء الباقات, channel row title); lengths spelled out in row subtitles and \"in 1h 20m\" tags; tanwin written ـاً.",
+        "The website button always opens the site at the top (it starts in English, light theme)."
+      ]
+    },
+    {
+      "v": "1.38.2",
+      "date": "Nov 27, 2026",
+      "title": "Arabic: scroll bar flush on the far left; arrows of the f…",
+      "tags": [],
+      "items": [
+        "Arabic: scroll bar flush on the far left; arrows of the featured title on the left; clock, temperature and date in Arabic digits on the Premiere home; \"شاهد المزيد\" with a left-pointing arrow.",
+        "Arabic lengths are spelled out (ساعتين و30 دقيقة).",
+        "Window title is \"Cinema Premiere IPTV\" in every language.",
+        "Settings group highlight redesigned: gold glass bar that glides, text never changes colour (no flicker).",
+        "Live channel cards on the Premiere home show the full name."
+      ]
+    },
+    {
+      "v": "1.38.1",
+      "date": "Nov 27, 2026",
+      "title": "Thick scroll bar also in Arabic (on the left) and on the …",
+      "tags": [],
+      "items": [
+        "Thick scroll bar also in Arabic (on the left) and on the Sports page.",
+        "Settings groups: smooth highlight, no flicker.",
+        "Search button in the side menu.",
+        "Theme names readable on the picture cards; modern Internet icon.",
+        "Arabic: clearer Settings names; Arabic digits in the Home weather and clock bar."
+      ]
+    },
+    {
+      "v": "1.38.0",
+      "date": "Nov 27, 2026",
+      "title": "The whole app now speaks Arabic and Spanish",
+      "tags": [],
+      "items": [
+        "The whole app now speaks Arabic and Spanish. Settings > Language switches at once and is remembered.",
+        "Arabic is mirrored right to left; the video player and the PIN keypad stay as they are.",
+        "Movie and series stories show in your language when available."
+      ]
+    },
+    {
       "v": "1.37.4",
       "date": "Nov 27, 2026",
       "title": "The e-mail code box shows six dots, one for each digit of…",
