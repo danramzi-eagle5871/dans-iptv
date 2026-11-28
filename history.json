@@ -1450,6 +1450,56 @@
   ],
   "windows": [
     {
+      "v": "1.48.0",
+      "date": "Nov 28, 2026",
+      "title": "The featured movies and shows at the top of Home now fill…",
+      "tags": [],
+      "items": [
+        "The featured movies and shows at the top of Home now fill the whole screen with a sharper picture, so faces are no longer cut off. Scroll down for Continue watching and the other rows. The slow zoom stays."
+      ]
+    },
+    {
+      "v": "1.47.0",
+      "date": "Nov 28, 2026",
+      "title": "New: Settings > Home screen > Hide a Home row",
+      "tags": [],
+      "items": [
+        "New: Settings > Home screen > Hide a Home row. You can hide any row the app puts on the Home page (and show it again).",
+        "The Tonight's Pick mood row is removed from the Home page.",
+        "The small trash-can icon is removed from the Remove button."
+      ]
+    },
+    {
+      "v": "1.46.2",
+      "date": "Nov 28, 2026",
+      "title": "The keyboard shortcut hints are gone from every screen (S…",
+      "tags": [],
+      "items": [
+        "The keyboard shortcut hints are gone from every screen (Settings, Search, the choose windows and the small hover tips). The keys still work.",
+        "Arabic: the title page background picture looks like English (the sharp person is no longer hidden behind the dark side).",
+        "Arabic and Spanish: the line \"5 versions available: 4K . Full HD ...\" is fully translated."
+      ]
+    },
+    {
+      "v": "1.46.1",
+      "date": "Nov 28, 2026",
+      "title": "Arabic: the actor's name in the top bar (when you scroll …",
+      "tags": [],
+      "items": [
+        "Arabic: the actor's name in the top bar (when you scroll down) also keeps its dot / Jr. at the end."
+      ]
+    },
+    {
+      "v": "1.46.0",
+      "date": "Nov 28, 2026",
+      "title": "Arabic: the arrows at the sides of the rows point the sam…",
+      "tags": [],
+      "items": [
+        "Arabic: the arrows at the sides of the rows point the same way as in English.",
+        "The Edit, Save, Telegram and Write-an-email buttons show words only, without small icons."
+      ]
+    },
+    {
       "v": "1.45.1",
       "date": "Nov 27, 2026",
       "title": "Arabic: Cairo is now the standard Arabic font (you can st…",
